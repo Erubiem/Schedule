@@ -37,3 +37,7 @@
 		}
 	}
   
+	int _level = DataManager.Instance.saveData.attackLevel[id];
+        coin0 = DataManager.Instance.opAttackList[id].coin;
+        coin1 = (((_level * (_level + 1) / 2) - (_level - 1)) * coin0);
+        valuecoin.text = coin1.ToString();
