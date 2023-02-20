@@ -1,5 +1,5 @@
-```charp
-private static DataManager instance;
+
+	private static DataManager instance;
 	public static DataManager Instance
 	{
 		get
@@ -37,4 +37,3 @@ private static DataManager instance;
 		}
 	}
   
-```
