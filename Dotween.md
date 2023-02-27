@@ -1,4 +1,4 @@
-# Dotween에 대해서 ( Button )
+# Dotween에 대해서
 
 ---
 
@@ -36,6 +36,7 @@
 ## 반응형 버튼 만들기
 
 **버튼으로 만들고 싶은 Prefab 등에 코드들을 임포트할 필요가 있습니다**
+
 예시 이미지)
 
 ![image.jpg1](image/dotweenbtn1.PNG)
