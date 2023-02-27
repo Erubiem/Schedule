@@ -112,5 +112,5 @@ public class ButtonController_2 : MonoBehaviour
 
 코드를 일반적인 UI 버튼에 추가만 해주면 커졌다 작아졌다 하는 애니메이션을 기본적으로 무한반복합니다.
 <aside>
-위 두개의 코드로 기본적인 반응형 ui를 만들 수 있습니다.
+* 위 두개의 코드로 기본적인 반응형 ui를 만들 수 있습니다.
 </aside>
