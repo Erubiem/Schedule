@@ -35,8 +35,9 @@
 
 ## 반응형 버튼 만들기
 
-**버튼으로 만들고 싶은 Prefab 등에 아래 코드들을 임포트할 필요가 있습니다**
-
+**버튼으로 만들고 싶은 Prefab 등에 코드들을 임포트할 필요가 있습니다**
+예시 이미지)
+[image.jpg1](image/dotweenbtn1.PNG)
 ### 1. 토글
 
 ---
@@ -122,7 +123,11 @@ public class ButtonController_2 : MonoBehaviour
 
 ## 팝업 만들기
 
-**팝업으로 띄우고 싶은 Prefab 등에 아래 코드들을 임포트할 필요가 있습니다**
+**팝업으로 띄우고 싶은 Prefab 등에 코드들을 임포트, 버튼에 할당할 필요가 있습니다**
+예시 이미지)
+[image.jpg1](image/dotweenbtn2.PNG)
+예시 이미지 2)
+[image.jpg1](image/dotweenbtn3.PNG)
 
 ### 1. 커지는 형태의 팝업
 
