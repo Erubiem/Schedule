@@ -125,9 +125,11 @@ public class ButtonController_2 : MonoBehaviour
 ## 팝업 만들기
 
 **팝업으로 띄우고 싶은 Prefab 등에 코드들을 임포트, 버튼에 할당할 필요가 있습니다**
+
 예시 이미지)
 
 ![image.jpg1](image/dotweenbtn2.PNG)
+
 예시 이미지 2)
 
 ![image.jpg1](image/dotweenbtn3.PNG)
