@@ -111,6 +111,74 @@ public class ButtonController_2 : MonoBehaviour
 ```
 
 코드를 일반적인 UI 버튼에 추가만 해주면 커졌다 작아졌다 하는 애니메이션을 기본적으로 무한반복합니다.
+
+
+
 <aside>
-* 위 두개의 코드로 기본적인 반응형 ui를 만들 수 있습니다.
+* 위 두 종류의  코드로 기본적인 반응형 ui를 만들 수 있습니다.
 </aside>
+
+
+
+## 팝업 만들기
+
+---
+
+### 1. 커지는 형태의 팝업
+
+---
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using DG.Tweening;
+
+public class PannelController_1 : MonoBehaviour
+{
+    RectTransform rectTransform;
+    void Awake()
+    {
+        transform.localScale = Vector3.zero;
+    }
+
+    public void ShowWindow()
+    {
+        transform.DOScale(1f, 1f).SetEase(Ease.OutBounce);
+    }
+}
+```
+
+ShowWindow() 를 호출 (버튼 등에 등록해 호출) 하면 커지면서 등장하는 팝업이 생성됩니다.
+
+### 2. 떨어지는 느낌
+
+---
+
+```csharp
+using System.Collections;
+using System.Collections.Generic;
+using UnityEngine;
+using DG.Tweening;
+
+public class PannelController_2 : MonoBehaviour
+{
+    RectTransform rectTransform;
+    void Awake()
+    {
+       rectTransform = GetComponent<RectTransform>();
+       rectTransform.anchoredPosition = new Vector3(0, 700, 0);
+    }
+
+    public void ShowWindow()
+    {
+       rectTransform.DOLocalMoveY(0f, 1f).SetEase(Ease.OutBounce);
+    }
+}
+```
+
+ShowWindow() 를 호출 (버튼 등에 등록해 호출) 하면 떨어지면서 등장하는 팝업이 생성됩니다.
+
+
+
+
