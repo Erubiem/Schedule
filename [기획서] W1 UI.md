@@ -2,14 +2,14 @@
 ## UI 가이드
 
 <table>
-<tr>
-<td valign = top>
-<img src = "image/window.png">
-</td>
-<td valign = top>
-<img src = "image/window.png">
-</td>
-<td valign= top>
+    <tr>
+        <td valign = top>
+            <img src = "image/window.png">
+        </td>
+        <td valign = top>
+            <img src = "image/window.png">
+        </td>
+        <td valign= top>
     
 1) 레벨 : 마차 레벨 
 2) 은화 : 최대 은화 수량 (아웃 게임 기획 없어지면 골드로 대체)
@@ -17,17 +17,10 @@
 4) 게임속도 : 광고보고 게임 속도 2배
 5) 옵션 : 설정, 우편함, 절전모드
 
-    </td>
+        </td>
     </tr>
 </table>
 
-
-- 16번 화살표 버튼을 누르면 하단부 강화 메뉴가 숨길수 있다.
-- 우측은 강화 메뉴가 숨겨진 모습
-
-![image.jpg1](image/window.png) |![image.jpg2](image/window1.png)
---- | --- | 
-</br>
 
 ### 기본 UI
 - 강화를 위한 기본 UI
