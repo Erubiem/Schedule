@@ -1,7 +1,7 @@
 
 ## UI 가이드
 
-![image.jpg1](image/window1.png) |![image.jpg2](image/window1.png)
+![image.jpg1](image/window.png) |![image.jpg2](image/window1.png)
 --- | --- | 
 </br>
 
