@@ -4,12 +4,12 @@
 <table>
     <tr>
     <td valign = top>
-        <img src = image/window>
+        <img src = "image/window.png">
     </tb>
         <td valin = top>
-            <img src = image/window>
+            <img src = "image/window.png">
     </tb>
-        <td>
+        <td valgn= top>
     
 1) 레벨 : 마차 레벨 
 2) 은화 : 최대 은화 수량 (아웃 게임 기획 없어지면 골드로 대체)
