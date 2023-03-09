@@ -73,12 +73,11 @@
 <body>
 <tr>
 <td valign = top>
-<img src = "image/window2.png"></br>   
-* 강화 UI   </br>
+<img src = "image/window2.png"></br> 
 </td>
 <td valign= top>
     
-23) 마차 : 강화 메뉴가 하이드 된다. 
+23) 마차
         - 마차 정보를 볼수 있다.</br>
         - 우측에는 연구, 화물, 동료, 여객으로 가는 단축 버튼</br>
         - 하단에는 현재 스탯 정보와 사용하는 마차의 고유 기능을 볼수 있다. </br>
