@@ -36,10 +36,10 @@
     
 <tr>
 <td valign = top>
-<img src = "image/window.png"></br>    
+1) 기본 UI    
 </td>
 <td valign = top>
-<img src = "image/window1.png"></br>            
+1) 강화 메뉴 숨김 상태            
 </td>
 <td valign= top>
 </td>
