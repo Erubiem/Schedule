@@ -1,6 +1,18 @@
 
 ## UI 가이드
 
+<div>
+        <div valign = top>
+            <img src = "image/window.png"></br>    
+        </div> 
+                <div valign = top>
+            <img src = "image/window.png"></br>    
+        </div> 
+                <div valign = top>
+            <img src = "image/window.png"></br>    
+        </div> 
+</div>
+
 <table>
     <tr>
         <td valign = top>
@@ -27,8 +39,7 @@
 14) 일일 퀘스트 : 
 15) 이벤트 :            
             
-            
-            
+      
         </td>
     </tr>
     
