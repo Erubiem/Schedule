@@ -1,3 +1,10 @@
+
+## UI 가이드
+
+![image.jpg1](image/window.png) |![image.jpg2](image/window1.png)
+--- | --- | 
+</br>
+
 ### 기본 UI
 - 강화를 위한 기본 UI
 - 슬라이딩해서 하단부로 하이드 할수 있다. 
