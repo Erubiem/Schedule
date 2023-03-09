@@ -7,7 +7,8 @@
         <body>
     <tr>
         <td valign = top>
-            <img src = "image/window.png"></br>    
+            <img src = "image/window.png"></br>   
+         * 기본 UI   <br>
         </td>
         <td valign = top>
             <img src = "image/window1.png"></br>            
