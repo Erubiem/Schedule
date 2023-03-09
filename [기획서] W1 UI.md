@@ -2,21 +2,22 @@
 ## UI 가이드
 
 <table>
-    <tr>
-    <td valign = top>
-        <img src = "image/window.png">
-    </tb>
-        <td valin = top>
-            <img src = "image/window.png">
-    </tb>
-        <td valgn= top>
+<tr>
+<td valign = top>
+<img src = "image/window.png">
+</td>
+<td valign = top>
+<img src = "image/window.png">
+</td>
+<td valign= top>
     
 1) 레벨 : 마차 레벨 
 2) 은화 : 최대 은화 수량 (아웃 게임 기획 없어지면 골드로 대체)
 3) 다이아 : 최대 다이아 수량
 4) 게임속도 : 광고보고 게임 속도 2배
 5) 옵션 : 설정, 우편함, 절전모드
-</td>
+
+    </td>
     </tr>
 </table>
 
