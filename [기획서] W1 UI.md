@@ -112,6 +112,28 @@
 </body>
 </table>
 
+## UI 가이드 - 동료
+
+<table>
+<body>
+<tr>
+<td valign = top>
+<img src = "image/window2.png"></br> 
+</td>
+<td valign= top>
+    
+24) 동료 </br>
+      - 원작의 오브
+      - 고용 레벨 표기 (스테이지 별로 고용 가능하다.)
+      - 스테이지 클리어 마다 골드 보상  
+        - 동료 정보 판넬
+        - 동료 강화 버튼
+      
+</td>
+</tr> 
+</body>
+</table>
+
 ## UI 가이드 - 화물
 
 <table>
