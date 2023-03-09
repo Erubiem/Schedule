@@ -153,7 +153,7 @@
 </body>
 </table>
 
-## UI 가이드 - 여객
+## UI 가이드 - 상점
 
 <table>
 <body>
