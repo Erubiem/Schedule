@@ -83,21 +83,6 @@
         - 하단에는 현재 스탯 정보와 사용하는 마차의 고유 기능을 볼수 있다. </br>
 </td>
 </tr> 
-
-<tr>
-<td valign = top>
-<img src = "image/window2.png"></br> 
-</td>
-<td valign= top>
-23_1) 마차 선택 화면</br>
-        - 마차를 선택하여 교체 할수 있다.</br>
-        - 기념 주화로 마차를 업그레이드 할수 있다. </br>
-</td>
-</tr> 
-
-
-
-
 </body>
 </table>
 
