@@ -74,8 +74,7 @@
 
 <tr>
 <td valign = top>
-<img src = "image/window2.png"></br>   
-* 강화 UI   </br>
+<img src = "image/window2.png"></br> 
 </td>
 <td valign= top>
 23) 마차</br>
@@ -87,8 +86,7 @@
 
 <tr>
 <td valign = top>
-<img src = "image/window2.png"></br>   
-* 강화 UI   </br>
+<img src = "image/window2.png"></br> 
 </td>
 <td valign= top>
 23_1) 마차 선택 화면</br>
