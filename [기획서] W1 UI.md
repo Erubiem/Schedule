@@ -43,7 +43,7 @@
         <body>
     <tr>
         <td valign = top>
-            <img src = "image/window.png"></br>   
+            <img src = "image/window2.png"></br>   
             * 기본 UI   </br>
         </td>
         <td valign= top>
