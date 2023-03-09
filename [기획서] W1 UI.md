@@ -3,10 +3,10 @@
 
 <table>
     <tr>
-    <td>
+    <td valign = top>
         <img src = image/window>
     </tb>
-        <td>
+        <td valin = top>
             <img src = image/window>
     </tb>
         <td>
