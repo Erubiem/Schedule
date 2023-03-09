@@ -31,6 +31,16 @@
             
         </td>
     </tr>
+    
+    <tr>
+        <td valign = top>
+            <img src = "image/window.png"></br>    
+        </td>
+        <td valign = top>
+            <img src = "image/window1.png"></br>            
+        </td>
+        <td valign= top>
+    </td></tr>
 </table>
 
 
