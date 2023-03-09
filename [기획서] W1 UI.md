@@ -69,6 +69,7 @@
 </table>
 
 ## UI 가이드 - 마차
+
 <table>
 <body>
 <tr>
@@ -110,7 +111,9 @@
 </tr> 
 </body>
 </table>
+
 ## UI 가이드 - 화물
+
 <table>
 <body>
 <tr>
