@@ -41,10 +41,6 @@
             <img src = "image/window.png"></br>   
             * 기본 UI   </br>
         </td>
-        <td valign = top>
-            <img src = "image/window1.png"></br>
-            * 강화 메뉴 숨김 상태            </br>
-        </td>
         <td valign= top>
     
 16) 하이드 버튼 : 강화 메뉴가 하이드 된다. 
