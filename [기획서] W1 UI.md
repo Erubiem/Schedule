@@ -1,7 +1,6 @@
 
 ## UI 가이드
 
-<img src ="image/window.png" widht = 50%><br>
 ![image.jpg1](image/window.png) |![image.jpg2](image/window1.png)
 --- | --- | 
 </br>
