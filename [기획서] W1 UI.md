@@ -2,13 +2,13 @@
 ## UI 가이드
 
 <div>
-        <div valign = top>
+        <div valign = top  align = lefr>
             <img src = "image/window.png"></br>    
         </div> 
-                <div valign = top>
+                <div valign = top align = center>
             <img src = "image/window.png"></br>    
         </div> 
-                <div valign = top>
+                <div valign = top align = right>
             <img src = "image/window.png"></br>    
         </div> 
 </div>
