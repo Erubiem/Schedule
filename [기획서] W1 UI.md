@@ -4,10 +4,15 @@
 <table>
     <tr>
         <td valign = top>
-            <img src = "image/window.png">
+            <img src = "image/window.png"><br>
+- 메뉴 기본 
+- 일반적인 경우            
+            
         </td>
         <td valign = top>
             <img src = "image/window1.png">
+- 강화 메뉴 숨김 상태
+- 16번 버튼을 클릭하면 강화 메뉴가 숨김 상태로 변한다.            
         </td>
         <td valign= top>
     
