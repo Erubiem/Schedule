@@ -70,23 +70,36 @@
 
 ## UI 가이드 (하단부)
 <table>
-        <body>
-    <tr>
-        <td valign = top>
-            <img src = "image/window2.png"></br>   
-            * 강화 UI   </br>
-        </td>
-        <td valign= top>
+<body>
+
+<tr>
+<td valign = top>
+<img src = "image/window2.png"></br>   
+* 강화 UI   </br>
+</td>
+<td valign= top>
 23) 마차</br>
-        - 마차 정보 윈도우 (이미지, 이름) </br>
-        - 운영 : 마차, 동료, 화물, 여객 (해당 위치로 이동) </br>
-        - 스탯 정보</br>
-        - 현재 레벨, 마차 패시브 스킬등 내용</br>
-        - 하부 메뉴
-                - 마차 / 유물 / 속성 </br>   
-             
+        - 마차 정보를 볼수 있다.</br>
+        - 우측에는 연구, 화물, 동료, 여객으로 가는 단축 버튼</br>
+        - 하단에는 현재 스탯 정보와 사용하는 마차의 고유 기능을 볼수 있다. </br>
 </td>
 </tr> 
+
+<tr>
+<td valign = top>
+<img src = "image/window2.png"></br>   
+* 강화 UI   </br>
+</td>
+<td valign= top>
+23_1) 마차 선택 화면</br>
+        - 마차를 선택하여 교체 할수 있다.</br>
+        - 기념 주화로 마차를 업그레이드 할수 있다. </br>
+</td>
+</tr> 
+
+
+
+
 </body>
 </table>
 
