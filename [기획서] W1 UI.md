@@ -68,7 +68,7 @@
 </body>
 </table>
 
-
+## UI 가이드 (하단부)
 <table>
         <body>
     <tr>
