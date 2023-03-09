@@ -1,5 +1,7 @@
 
 ## UI 가이드
+- 16번 화살표 버튼을 누르면 하단부 강화 메뉴가 숨길수 있다.
+- 우측은 강화 메뉴가 숨겨진 모습
 
 ![image.jpg1](image/window.png) |![image.jpg2](image/window1.png)
 --- | --- | 
