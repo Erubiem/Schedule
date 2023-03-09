@@ -70,13 +70,13 @@
 
 ## UI 가이드 (하단부)
 <table>
-        <body>
-    <tr>
-        <td valign = top>
-            <img src = "image/window2.png"></br>   
-            * 강화 UI   </br>
-        </td>
-        <td valign= top>
+<body>
+<tr>
+<td valign = top>
+<img src = "image/window2.png"></br>   
+* 강화 UI   </br>
+</td>
+<td valign= top>
     
 23) 마차 : 강화 메뉴가 하이드 된다. 
         - 마차 정보를 볼수 있다.</br>
