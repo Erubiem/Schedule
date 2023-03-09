@@ -36,10 +36,10 @@
     
 <tr>
 <td valign = top>
-1) 기본 UI    
+* 기본 UI    
 </td>
 <td valign = top>
-1) 강화 메뉴 숨김 상태            
+* 강화 메뉴 숨김 상태            
 </td>
 <td valign= top>
 </td>
