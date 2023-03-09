@@ -8,10 +8,11 @@
     <tr>
         <td valign = top>
             <img src = "image/window.png"></br>   
-         * 기본 UI   <br>
+            * 기본 UI   </br>
         </td>
         <td valign = top>
-            <img src = "image/window1.png"></br>            
+            <img src = "image/window1.png"></br>
+            * 강화 메뉴 숨김 상태            </br>
         </td>
         <td valign= top>
     
@@ -38,18 +39,7 @@
         - 던전 입장 화면              
       
 </td>
-</tr>
-    
-<tr>
-<td valign = top>
-* 기본 UI    
-</td>
-<td valign = top>
-* 강화 메뉴 숨김 상태            
-</td>
-<td valign= top>
-</td>
-</tr>
+</tr> 
 </body>
 </table>
 
