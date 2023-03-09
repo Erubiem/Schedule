@@ -7,7 +7,7 @@
             <img src = "image/window.png">
         </td>
         <td valign = top>
-            <img src = "image/window.png">
+            <img src = "image/window1.png">
         </td>
         <td valign= top>
     
