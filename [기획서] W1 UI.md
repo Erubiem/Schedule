@@ -1,19 +1,10 @@
 
 ## UI 가이드
 
-<div>
-        <div valign = top  align = lefr>
-            <img src = "image/window.png"></br>    
-        </div> 
-                <div valign = top align = center>
-            <img src = "image/window.png"></br>    
-        </div> 
-                <div valign = top align = right>
-            <img src = "image/window.png"></br>    
-        </div> 
-</div>
+ 
 
 <table>
+        <body>
     <tr>
         <td valign = top>
             <img src = "image/window.png"></br>    
@@ -40,18 +31,20 @@
 15) 이벤트 :            
             
       
-        </td>
-    </tr>
+</td>
+</tr>
     
-    <tr>
-        <td valign = top>
-            <img src = "image/window.png"></br>    
-        </td>
-        <td valign = top>
-            <img src = "image/window1.png"></br>            
-        </td>
-        <td valign= top>
-    </td></tr>
+<tr>
+<td valign = top>
+<img src = "image/window.png"></br>    
+</td>
+<td valign = top>
+<img src = "image/window1.png"></br>            
+</td>
+<td valign= top>
+</td>
+</tr>
+</body>
 </table>
 
 
