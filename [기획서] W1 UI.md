@@ -152,7 +152,7 @@
 <body>
 <tr>
 <td valign = top width ="33%">
-<img src = "image/window2.png"></br> 
+<img src = "image/window20.png"></br> 
 </td>
 <td valign= top>
     
