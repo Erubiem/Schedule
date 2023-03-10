@@ -73,7 +73,7 @@
 <table>
 <body>
 <tr>
-<td valign = top>
+<td valign = top width = "33%">
 <img src = "image/window2.png"></br> 
 </td>
 <td valign= top>
