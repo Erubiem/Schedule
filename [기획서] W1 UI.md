@@ -94,7 +94,7 @@
 <table>
 <body>
 <tr>
-<td valign = top>
+**<td valign = top>**
 <img src = "image/window2.png"></br> 
 </td>
 <td valign= top>
@@ -116,7 +116,7 @@
 <table>
 <body>
 <tr>
-<td valign = top>
+<td valign = top width ="33%">
 <img src = "image/window2.png"></br> 
 </td>
 <td valign= top>
@@ -144,7 +144,7 @@
 <table>
 <body>
 <tr>
-<td valign = top>
+<td valign = top width ="33%">
 <img src = "image/window2.png"></br> 
 </td>
 <td valign= top>
@@ -173,7 +173,7 @@
 <table>
 <body>
 <tr>
-<td valign = top>
+<td valign = top width = "33%">
 <img src = "image/window10.png"></br> 
 </td>
 <td valign= top>
