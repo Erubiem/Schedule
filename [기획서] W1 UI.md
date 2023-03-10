@@ -94,7 +94,7 @@
 <table>
 <body>
 <tr>
-**<td valign = top>**
+<td valign = top>
 <img src = "image/window2.png"></br> 
 </td>
 <td valign= top>
