@@ -27,7 +27,7 @@
 
 ---
 
-## 이 코드를 하기 전 Visual Studio 2022에서는 프로젝트->참조 추가->COM->검색에서 'Excel' 타이핑 해주면 Microft Excel 15.0 Object Library가 나오는데 왼쪽 상자를 클릭하여 추가하고 확인을 눌러줘야한다.
+## 이 코드를 하기 전 Visual Studio 2022에서는 프로젝트->참조 추가->COM->검색에서 'Excel' 타이핑 해주면 Microft Excel 15.0 Object Library가 나오는데 왼쪽 상자를 클릭하여 추가하고 확인을 눌러줘야 합니다.
 
 ## 엑셀 안의 데이터를 텍스트화 시키는 코드
 
@@ -35,6 +35,18 @@
 분리된 셀의 정의를 ';'로 지정하여 가로줄의 텍스트를 뽑아낸다.  
 * 먼저 테스트로 뽑아낼 파일의 위치를 지정해주세요.
 * 뽑아낼 엑셀은 excelFilePath, 생성하거나 붙여넣을 파일은 textFilePath에 넣으면 됩니다.
+
+
+![1](https://user-images.githubusercontent.com/124660944/224658673-a9fb52ce-7376-4426-a75a-bb73c8b097cf.PNG)
+
+
+
+![2](https://user-images.githubusercontent.com/124660944/224659055-3cc4c7e4-5355-413e-a75b-e9bac335683c.PNG)
+
+![3](https://user-images.githubusercontent.com/124660944/224659074-fa112a43-329e-4f13-823b-bda5a478b609.PNG)
+
+![4](https://user-images.githubusercontent.com/124660944/224659087-1b2186a0-791b-4f69-9748-d62f6e4dcde1.PNG)
+
 
 ```C#
 using System;
