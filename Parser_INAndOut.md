@@ -36,21 +36,21 @@
 * 먼저 테스트로 뽑아낼 파일의 위치를 지정해주세요.
 * 뽑아낼 엑셀은 excelFilePath, 생성하거나 붙여넣을 파일은 textFilePath에 넣으면 됩니다.
 
-<img src="Parser1.PNG" width="100%"><br>
+<img src="image/Parser1.PNG" width="100%"><br>
 
 * 코드안에 excelFilePath와 textFilePath 함수들이 있다.
 * excelFilePath에는 @"엑셀 파일 경로" 
 * textFilePath에는 @"저장할 폴더경로\새로만들파일이름.txt" 를 정해준다. 
 
-<img src="Parser2.PNG" width="100%"><br>
+<img src="image/Parser2.PNG" width="100%"><br>
 
 * 이 코드를 넣은 오브젝트에 라인렌더러 추가 필요
 
-<img src="Parser3.PNG" width="100%"><br>
+<img src="image/Parser3.PNG" width="100%"><br>
 
 * 이 코드를 넣은 오브젝트에 라인렌더러 추가 필요
 
-<img src="Parser4.PNG" width="100%"><br>
+<img src="image/Parser4.PNG" width="100%"><br>
 
 * 이 코드를 넣은 오브젝트에 라인렌더러 추가 필요
 
