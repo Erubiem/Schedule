@@ -36,17 +36,23 @@
 * 먼저 테스트로 뽑아낼 파일의 위치를 지정해주세요.
 * 뽑아낼 엑셀은 excelFilePath, 생성하거나 붙여넣을 파일은 textFilePath에 넣으면 됩니다.
 
+<img src="Parser1.PNG" width="100%"><br>
 
-![1](https://user-images.githubusercontent.com/124660944/224658673-a9fb52ce-7376-4426-a75a-bb73c8b097cf.PNG)
+* 코드안에 excelFilePath와 textFilePath 함수들이 있다.
+* excelFilePath에는 @"엑셀 파일 경로" 
+* textFilePath에는 @"저장할 폴더경로\새로만들파일이름.txt" 를 정해준다. 
 
+<img src="Parser2.PNG" width="100%"><br>
 
+* 이 코드를 넣은 오브젝트에 라인렌더러 추가 필요
 
-![2](https://user-images.githubusercontent.com/124660944/224659055-3cc4c7e4-5355-413e-a75b-e9bac335683c.PNG)
+<img src="Parser3.PNG" width="100%"><br>
 
-![3](https://user-images.githubusercontent.com/124660944/224659074-fa112a43-329e-4f13-823b-bda5a478b609.PNG)
+* 이 코드를 넣은 오브젝트에 라인렌더러 추가 필요
 
-![4](https://user-images.githubusercontent.com/124660944/224659087-1b2186a0-791b-4f69-9748-d62f6e4dcde1.PNG)
+<img src="Parser4.PNG" width="100%"><br>
 
+* 이 코드를 넣은 오브젝트에 라인렌더러 추가 필요
 
 ```C#
 using System;
