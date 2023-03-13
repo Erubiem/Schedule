@@ -49,9 +49,7 @@
             Excel.Application excel = new Excel.Application();
             Excel.Workbook workbook = null;
 
-            try
-            {
-                workbook = excel.Workbooks.Open(excelFilePath);
+
 ```
 * Excel.Application은 Excel 애플리케이션을 나타내는 COM 객체입니다. Excel.Application() 생성자를 호출하여 객체를 만듭니다.
 * Excel.Workbook은 Excel 워크북을 나타내는 COM 객체입니다.
