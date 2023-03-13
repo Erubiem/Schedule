@@ -32,7 +32,7 @@
 ## 엑셀 안의 데이터를 텍스트화 시키는 코드
 
 엑셀의 데이터들을 텍스트로 변환시키는 코드
-분리된 셀의 정의를 ';'로 지정하여 가로줄의 텍스트를 뽑아낸다.  
+분리된 셀의 정의를 ';'로 지정하여 가로줄의 텍스트를 뽑아냅니다.  
 * 먼저 테스트로 뽑아낼 파일의 위치를 지정해주세요.
 * 뽑아낼 엑셀은 excelFilePath, 생성하거나 붙여넣을 파일은 textFilePath에 넣으면 됩니다.
 
@@ -40,14 +40,14 @@
 
 * 코드안에 excelFilePath와 textFilePath 함수들이 있다.
 * excelFilePath에는 @"엑셀 파일 경로" 
-* textFilePath에는 @"저장할 폴더경로\새로만들파일이름.txt" 를 정해준다. 
+* textFilePath에는 @"저장할 폴더경로\새로만들파일이름.txt" 를 정해줍니다. 
 
 
 * 세팅을 완료한 후에 실행하면 몇 초의 시간이 지난 후 텍스트 파일이 생성되었다는 말과 함께 
 
 <img src="image/Parser3.PNG" width="100%"><br>
 
-* 정해준 폴더 안에 파일이 생기게 된다.
+* 정해준 폴더 안에 파일이 생기게 됩니다.
 
 <img src="image/Parser4.PNG" width="100%"><br>
 
@@ -61,10 +61,10 @@ if (col != worksheet.UsedRange.Columns.Count)
 
 ```
 
-* 이 부분에서 sw.Write(";"); 가 셀이 구분되는 부분을 세미콜론으로 정한 코드이고, 괄호 안을 바꾸어주면 그에 따라 구분자도 바뀌게 된다.
+* 이 부분에서 sw.Write(";"); 가 셀이 구분되는 부분을 세미콜론으로 정한 코드이고, 괄호 안을 바꾸어주면 그에 따라 구분자도 바뀌게 됩니다.
 
 
-
+<전체코드>
 ```C#
 using System;
 using System.Collections.Generic;
