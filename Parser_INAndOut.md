@@ -31,16 +31,89 @@
 
 ## 엑셀 안의 데이터를 텍스트화 시키는 코드
 
-엑셀의 데이터들을 텍스트로 변환시키는 코드
-분리된 셀의 정의를 ';'로 지정하여 가로줄의 텍스트를 뽑아냅니다.  
-* 먼저 테스트로 뽑아낼 파일의 위치를 지정해주세요.
-* 뽑아낼 엑셀은 excelFilePath, 생성하거나 붙여넣을 파일은 textFilePath에 넣으면 됩니다.
+<h1> 코드 내용 </h1>
+
+
+```C#
+ string excelFilePath = @"C:\Users\SESI\Downloads\language.howtoplay.xlsx";
+ string textFilePath = @"C:\Users\SESI\Downloads\Excel_practice\ExcelText1.txt";
+```
+* string excelFilePath와 string textFilePath는 각각 엑셀 파일의 경로와 텍스트 파일의 경로를 나타내는 문자열 변수입니다.
+* excelFilePath에는 @"엑셀 파일 경로" 
+* textFilePath에는 @"저장할 폴더경로\새로만들파일이름.txt" 를 정해줍니다. 
+
+
+
+```C#
+
+            Excel.Application excel = new Excel.Application();
+            Excel.Workbook workbook = null;
+
+            try
+            {
+                workbook = excel.Workbooks.Open(excelFilePath);
+```
+* Excel.Application은 Excel 애플리케이션을 나타내는 COM 객체입니다. Excel.Application() 생성자를 호출하여 객체를 만듭니다.
+* Excel.Workbook은 Excel 워크북을 나타내는 COM 객체입니다.
+
+```C#
+            try
+            {
+                workbook = excel.Workbooks.Open(excelFilePath);
+                Excel.Worksheet worksheet = workbook.Worksheets[1];
+```
+* try 블록 안에서 excel.Workbooks.Open(excelFilePath)를 호출하여 엑셀 파일을 연 후 Excel.Workbook 개체를 할당합니다.
+* 첫 번째 워크시트 가져옵니다. 
+
+
+```C#
+ using (StreamWriter sw = new StreamWriter(textFilePath))
+                {
+                    // 각 행을 탐색하여 셀 값을 읽어 텍스트 파일에 쓰기
+                    for (int row = 1; row <= worksheet.UsedRange.Rows.Count; row++)
+                    {
+                        for (int col = 1; col <= worksheet.UsedRange.Columns.Count; col++)
+                        {
+                            // 셀 값 읽어오기
+                            Excel.Range range = worksheet.Cells[row, col];
+                            string cellValue = (range.Value2 == null) ? "" : range.Value2.ToString();
+
+                            // 텍스트 파일에 쓰기
+                            sw.Write(cellValue);
+
+                            // 마지막 셀이 아니면 구분자(세미콜론) 쓰기
+                            if (col != worksheet.UsedRange.Columns.Count)
+                            {
+                                sw.Write(";");
+                            }
+                        }
+                        sw.WriteLine(); // 다음 행으로 이동하여 쓰기
+                    }
+                }
+```
+
+
+
+
+
+
+```C#
+
+
+
+```
+
+
+```C#
+
+
+
+```
+
+
 
 <img src="image/Parser1.PNG" width="100%"><br>
 
-* 코드안에 excelFilePath와 textFilePath 함수들이 있다.
-* excelFilePath에는 @"엑셀 파일 경로" 
-* textFilePath에는 @"저장할 폴더경로\새로만들파일이름.txt" 를 정해줍니다. 
 
 
 * 세팅을 완료한 후에 실행하면 몇 초의 시간이 지난 후 텍스트 파일이 생성되었다는 말과 함께 
@@ -52,14 +125,6 @@
 <img src="image/Parser4.PNG" width="100%"><br>
 
 * 그 파일을 열어보면 엑셀 안의 데이터가 전부 들어가 있고, 셀이 구분되는 부분은 ';'(세미콜론)으로 쓰여졌다는 것을 알 수 있는데.
-
-```C#
-if (col != worksheet.UsedRange.Columns.Count)
-                            {
-                                sw.Write(";");
-                            }
-
-```
 
 * 이 부분에서 sw.Write(";"); 가 셀이 구분되는 부분을 세미콜론으로 정한 코드이고, 괄호 안을 바꾸어주면 그에 따라 구분자도 바뀌게 됩니다.
 
