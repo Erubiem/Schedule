@@ -91,25 +91,6 @@
 ```
 
 
-
-
-
-
-```C#
-
-
-
-```
-
-
-```C#
-
-
-
-```
-
-
-
 <img src="image/Parser1.PNG" width="100%"><br>
 
 
@@ -244,19 +225,19 @@ namespace Excel_makeByText
         static void Main(string[] args)
         {
             
-            Application excel = new Application();// 어플리케이션 선언 
-            Workbook workbook = excel.Workbooks.Add(); // 워크 북 더하기
-            Worksheet worksheet = workbook.Sheets[1]; // 데이터를 넣을 워크 시트 선언 
-            string[] lines = File.ReadAllLines(@"C:\\Users\\SESI\\Downloads\\language.howtoplay.txt"); // 텍스트 파일을 읽을 경로 설정 
+            Application excel = new Application();
+            Workbook workbook = excel.Workbooks.Add();
+            Worksheet worksheet = workbook.Sheets[1];
+            string[] lines = File.ReadAllLines(@"C:\Users\SESI\Downloads\Excel_practice\ExcelText1.txt");
 
             int row = 1;
             foreach (string line in lines)
             {
-                string[] values = line.Split(';'); //텍스트 안의 글자들 속에 ';'마다 셀로 나누어줍니다.
+                string[] values = line.Split(';');
                 int column = 1;
                 foreach (string value in values)
                 {
-                    worksheet.Cells[row, column] = value; // 순서대로 글자를 셀에 입력해줍니다.
+                    worksheet.Cells[row, column] = value;
                     worksheet.Columns[column].AutoFit(); // 글자의 길이에 따라 셀이 늘어나는 코드
                     worksheet.Cells[row, column].WrapText = true; //셸이 줄바꿈이 되는 코드
                     column++;
@@ -264,11 +245,37 @@ namespace Excel_makeByText
                 row++;
             }
 
-            string savePath = @"C:\Users\SESI\Downloads\Excel_practice\output.xlsx"; //엑셀파일을 저장할 경로를 설정
-            workbook.SaveAs(savePath); // 엑셀 파일저장
-            workbook.Close(); // 워크 북 종료
-            excel.Quit(); // 엑셀 나가기
+            string savePath = @"C:\Users\SESI\Downloads\Excel_practice\output.xlsx";
+            workbook.SaveAs(savePath);
+            workbook.Close();
+            excel.Quit();
+
+            //clean up
+            ReleaseExcelObject(worksheet);
+            ReleaseExcelObject(workbook);
+            ReleaseExcelObject(excel);
+        }
+        private static void ReleaseExcelObject(object obj)
+        {
+            try
+            {
+                if (obj != null)
+                {
+                    Marshal.ReleaseComObject(obj);
+                    obj = null;
+                }
+            }
+            catch (Exception ex)
+            {
+                obj = null;
+                throw ex;
+            }
+            finally
+            {
+                GC.Collect();
+            }
         }
     }
 }
+
 ```
