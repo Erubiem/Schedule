@@ -91,10 +91,6 @@
 ```
 
 
-<img src="image/Parser1.PNG" width="100%"><br>
-
-
-
 * 세팅을 완료한 후에 실행하면 몇 초의 시간이 지난 후 텍스트 파일이 생성되었다는 말과 함께 
 
 <img src="image/Parser3.PNG" width="100%"><br>
