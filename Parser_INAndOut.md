@@ -189,7 +189,7 @@ namespace Excel_MakeText
 ```
 
 
-
+---
 
 ## 텍스트안에 있는 데이터를 엑셀로 옮기는 코드
 
