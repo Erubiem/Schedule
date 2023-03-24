@@ -4,7 +4,10 @@
    - 추후 발사체 구현
       - 직사 혹은 곡사가 필요할때 사용하기 위해서
        
-2) 주의사항
+2) 다운로드 
+   - 다운로드 : [유니티패키지](https://github.com/SesisoftTFT/Schedule/tree/main/Unitypacakge/[3D]ItemDropKit.unitypackage)  
+
+4) 주의사항
    - 유니티 버전 2021.3.10f1 에서 제작 
    - 3D 탑뷰에서 사용    
      - 2D좌표계는 2D 던지기 메뉴얼 참고
@@ -14,7 +17,7 @@
      - Edit - ProjectSettings - Physics 하단
      - 땅 이외에는 충돌이 안나게 하는것 추천
 
-3) 스크립트 종류
+4) 스크립트 종류
    - ![image.png1](image/CurveShot_Image/3D/scripts.png)
    - ThrowItemBase (상속용)
    - 발사 방식에 따른 스크립트 (ShotType)
