@@ -5,7 +5,7 @@
       - 직사 혹은 곡사가 필요할때 사용하기 위해서
        
 2) 다운로드 
-   - 다운로드 : [유니티패키지](https://github.com/SesisoftTFT/Schedule/tree/main/Unitypacakge/[3D]ItemDropKit.unitypackage)  
+   - 다운로드 : [유니티패키지](https://github.com/SesisoftTFT/Schedule/tree/main/Unitypacakge/[3D]ThrowItemKit.unitypackage)  
 
 4) 주의사항
    - 유니티 버전 2021.3.10f1 에서 제작 
