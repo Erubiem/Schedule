@@ -24,7 +24,7 @@
      - 날아갈 오브젝트에 적용
 
 ## 2. 사용법
-![image.png2](image/PartExploed/3D/prefab2.png)
+![image.png2](image/PartsExploed/3D/prefab2.png)
 
 1) 부품 오브젝트에 리지드바디, 콜라이더 적용
    - 이때 부품 오브젝트는 빈 오브젝트
@@ -34,7 +34,7 @@
    - Accelration: 중력 가속도
    - DestroyTime: 생성후 사라지기까지 걸리는 시간
 
-![image.png3](image/PartExploed/3D/prefab1.png)
+![image.png3](image/PartsExploed/3D/prefab1.png)
 
 3) 에너미 오브젝트에 PartsExploed 적용 및 설정
    - ItemDropOnlyUI는 적용하지 않아도 됨
