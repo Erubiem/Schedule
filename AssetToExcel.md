@@ -51,6 +51,7 @@
  - 4. 이 코드를 하기 전 Visual Studio 2022에서는 프로젝트->참조 추가->COM->검색에서 'Excel' 타이핑 해주면 Microft Excel 15.0 Object Library가 나오는데 왼쪽 상자를 클릭하여 추가하고 확인을 눌러줘야 합니다.
  <img src="image/AssetToExcel_2.PNG" width="100%"><br>
  - 5. 마지막으로 에셋파일이 들어있는 폴더의 경로를 찾고 경로의 길이를 재야합니다.
+ <img src="image/AssetToExcel_4.PNG" width="100%"><br>
  - 6. 경로를 찾았다면 세 개의 변수를 바꿔줘야 합니다.
 --------------------------------------------------------------------------------------------------------------------------------------------- 
  ### 첫 번째 
@@ -58,13 +59,15 @@
 string directoryPath = @"엑셀로 바꿀 폴더의 ";
 ```
  - 이 변수는 엑셀로 바꿀 폴더의 경로를 정해줘야 합니다.
- - 그렇기에 폴더로 가서 경로를 복사해주고 쌍따옴표 안에 붙여넣기를 해주면 됩니다.
+ - 아까 복사했던 주소를 쌍따옴표 안에 붙여넣기를 해주면 됩니다.
+
 
  ### 두 번째 
 ```C#
  Directory.CreateDirectory(path[0] + "\\" + path[1] + "\\" + path[2] + "\\" + path[3] + "\\" +
   path[4] + "\\" + path[5]);
 ```
+
  - 이 변수는 디렉토리를 따로 하나 복사해서 엑셀로 바꾼 파일들을 넣습니다. 
  - \마다 나눴기 때문에 길이에 따라 수정을 해줘야 합니다.
  - 예를 들어보자면 C:\Users\SESI\Downloads\homework\testFinal 에 파일이 담겨 있는 폴더들이 있으면 
@@ -78,7 +81,7 @@ string directoryPath = @"엑셀로 바꿀 폴더의 ";
  - 엑셀 파일을 저장하는 경로 설정하는 변수이기에.
  - 아까 폴더의 경로를 설정해왔으니 그걸 복사 붙여넣기를 하고 마지막에 + path[5] + "\\" + fileName[0] 를 넣으면 될 것 같습니다. 
  - 이렇게 하면 각 에셋 파일이 모두 엑셀 파일로 바뀌어진 광경을 볼 수 있습니다.
-
+  <img src="image/AssetToExcel_5.PNG" width="100%"><br>
 ---------------------------------------------------------------------------------------------------------------------------------------------
  ##  3) 네임스페이스
 ```C#
@@ -185,10 +188,7 @@ namespace Excel_parseer
                 Worksheet worksheet = workbook.Sheets[1]; //storytimeline
                 Worksheet worksheet2 = workbook.Sheets[1]; //title_color
 
-                Console.WriteLine(excelFilePath);
-                // asset 파일 경로
-                //string assetFilePath = "C:\\Users\\SESI\\Downloads\\homework\\source\\Bundle\\Resources\\Story\\Data\\04\\1001\\storytimeline_041001001.asset";
-                
+                Console.WriteLine(excelFilePath);       
                 string[] path = excelFilePath.Split('\\'); // 파일 경로를 구분 
                 string[] fileName = path[12].Split('.'); // 파일 네임에서 확장자를 뺌
                                                          // 텍스트 파일 경로
