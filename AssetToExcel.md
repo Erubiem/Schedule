@@ -65,14 +65,16 @@ string directoryPath = @"엑셀로 바꿀 폴더의 ";
  ### 두 번째 
 ```C#
  Directory.CreateDirectory(path[0] + "\\" + path[1] + "\\" + path[2] + "\\" + path[3] + "\\" +
-  path[4] + "\\" + path[5]);
+                    path[4] + "\\" + "testFinal\\" + path[6] + "\\" + path[7] + "\\" + path[8] + "\\" + path[9] + "\\"
+                    + path[10] + "\\" + path[11]);
 ```
 
- - 이 변수는 디렉토리를 따로 하나 복사해서 엑셀로 바꾼 파일들을 넣습니다. 
+ - 이 변수는 디렉토리를 따로 하나 생성합니다.
  - \마다 나눴기 때문에 길이에 따라 수정을 해줘야 합니다.
- - 예를 들어보자면 C:\Users\SESI\Downloads\homework\testFinal 에 파일이 담겨 있는 폴더들이 있으면 
- - C:이 path[0]이고 User가 path[1], SEST가 path[2]. 이런 식으로 길이에 따라 넣으면 되니 이건 path[5]까지 넣으면 될 것 같습니다.
-
+ - 예를 들어보자면 C:\\Users\\SESI\\Downloads\\homework\\source\\Bundle\\Resources\\Story\\Data\\04\\1001\\storytimeline_041001001.asset 이라는 파일 경로가 있으면
+ - C:이 path[0]이고 User가 path[1], SEST가 path[2]. 이런 식으로 길이에 따라 넣으면 되니 파일이름 전까지인 path[11]까지 넣으면 될 것 같습니다.
+ - 그리고 중간에 따로 생성하기 위해 source를 testFinal같은 원하는 이름으로 바꿔주면 됩니다.
+<img src="image/AssetToExcel_5.PNG" width="100%"><br>
  ### 세 번째 
 ```C#
  string savePath = path[0] + "\\" + path[1] + "\\" + path[2] + "\\" + path[3] + "\\" +
@@ -81,7 +83,7 @@ string directoryPath = @"엑셀로 바꿀 폴더의 ";
  - 엑셀 파일을 저장하는 경로 설정하는 변수이기에.
  - 아까 폴더의 경로를 설정해왔으니 그걸 복사 붙여넣기를 하고 마지막에 + path[5] + "\\" + fileName[0] 를 넣으면 될 것 같습니다. 
  - 이렇게 하면 각 에셋 파일이 모두 엑셀 파일로 바뀌어진 광경을 볼 수 있습니다.
-  <img src="image/AssetToExcel_5.PNG" width="100%"><br>
+ <img src="image/AssetToExcel_6.PNG" width="100%"><br>
 ---------------------------------------------------------------------------------------------------------------------------------------------
  ##  3) 네임스페이스
 ```C#
@@ -145,6 +147,9 @@ ReleaseExcelObject()
 ```
 * 이러한 코드 줄은 Excel 개체와 연결된 모든 리소스가 제대로 해제되도록 하도록 하며, 이는 메모리 누수 및 기타 문제를 방지합니다.
 
+ ##  4) 결과
+* 출력하면 먼저 어떤 에셋 파일을 열고 있는지 나오고 성공을 한다면 "Excel file created , you can find the file"라는 문구가 세 번 나옵니다.
+ <img src="image/AssetToExcel_6.PNG" width="100%"><br>
 
 
 ## 전체 코드
@@ -196,8 +201,7 @@ namespace Excel_parseer
                                                          // asset 파일 내용을 텍스트 파일로 저장
                                                          //File.WriteAllText(textFilePath, File.ReadAllText(assetFilePath));
 
-                Directory.CreateDirectory(path[0] + "\\" + path[1] + "\\" + path[2] + "\\" + path[3] + "\\" +
-  path[4] + "\\" + path[5]); //폴더 생성
+                Directory.CreateDirectory("따로 폴더를 생성하여 저장할 경로"); //폴더 생성
 
                 string[] lines = File.ReadAllLines(excelFilePath); //라인으로 텍스트의 글들을 싹 읽어 온거
 
@@ -626,8 +630,7 @@ namespace Excel_parseer
 
                 }
                 //엑셀를 저장하는 경로 설정
-                string savePath = path[0] + "\\" + path[1] + "\\" + path[2] + "\\" + path[3] + "\\" +
-                    path[4] + "\\" + path[5] + "\\" + fileName[0];
+                string savePath = 따로 폴더를 생성하여 저장할 경로 + 파일이름;
 
                 workbook.SaveAs(savePath, AccessMode: Excel.XlSaveAsAccessMode.xlExclusive,
     ConflictResolution: Excel.XlSaveConflictResolution.xlLocalSessionChanges);
