@@ -149,7 +149,7 @@ ReleaseExcelObject()
 
  ##  4) 결과
 * 출력하면 먼저 어떤 에셋 파일을 열고 있는지 나오고 성공을 한다면 "Excel file created , you can find the file"라는 문구가 세 번 나옵니다.
- <img src="image/AssetToExcel_6.PNG" width="100%"><br>
+ <img src="image/AssetToExcel_7.PNG" width="100%"><br>
 
 
 ## 전체 코드
