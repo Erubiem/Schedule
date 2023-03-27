@@ -3,7 +3,7 @@
 1) 개발목적  
    - 추후 발사체 구현
       - 직사 혹은 곡사가 필요할때 사용하기 위해서
-![image.gif](image/DropCoin/3D/3DThrow.gif)
+![image.gif](image/DropCoin/3D/3DItemDrop.gif)
        
 2) 다운로드
    - 다운로드 : [유니티패키지](https://github.com/SesisoftTFT/Schedule/tree/main/Unitypacakge/[3D]ItemDropKit.unitypackage)  
@@ -30,8 +30,6 @@
      - 2D 좌표계만 사용
 
 ## 2. 사용법
-![image.png2](image/DropCoin/3D/prefab.png)
-
 1) 발사체로 하고자 할 빈 게임 오브젝트에 스크립트 적용
    - 사용 용도에 따라서 ItemDropUI, ItemDropWorld중 하나만 적용
      - ItemDropUI: 월드에서 떨어진 아이템이 UI를 향해 날아갈때
