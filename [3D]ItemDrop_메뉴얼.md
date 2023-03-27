@@ -3,6 +3,7 @@
 1) 개발목적  
    - 추후 발사체 구현
       - 직사 혹은 곡사가 필요할때 사용하기 위해서
+![image.png0](image/DropCoin/3D/3DThrow)       
        
 2) 다운로드
    - 다운로드 : [유니티패키지](https://github.com/SesisoftTFT/Schedule/tree/main/Unitypacakge/[3D]ItemDropKit.unitypackage)  
