@@ -71,6 +71,17 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
 먼저 FirebaseAuth.unitypackage를 추가할텐데
  <img src="image/Fire5.PNG" width="100%"><br> 
 
+FirebaseAuth를 현재 유니티에 임포트한다.
+그리고 다운받은 google-signnin-unity를 추가할텐데 붉은 색 원안에 있는 것을 다운을 받았으면.
+ <img src="image/Fire6.PNG" width="100%"><br> 
+구글 로그인 패키지을 임포트를 해야 되는데 여기서 주의할 점이 있다.
+ <img src="image/Fire7.PNG" width="100%"><br> 
+유니티에 뜨는 임포트 창에서 “Unity.Compat.dll”과 “Unity.Tasks.dll”을 제외 시켜준다.
+그리고 임포트를 해주면 오류가 뜨는데
+ <img src="image/Fire8.PNG" width="100%"><br> 
+이럴 땐 “Google.VersionHandler”와 “Google.VersionHandlerImpl_v1.2.89.0”를 삭제해주면 된다.
+ <img src="image/Fire9.PNG" width="100%"><br>
+
 
 ### 유니티 에러
 
