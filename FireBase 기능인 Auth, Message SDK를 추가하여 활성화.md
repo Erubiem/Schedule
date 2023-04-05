@@ -107,7 +107,7 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
 
 ### 유니티 에러
 
-#### 1)
+### 1)
 ```C#
 Building Library\Bee\artifacts\Android\Manifest\LauncherManifestDiag.txt failed with output:
 System.NullReferenceException: Object reference not set to an instance of an object.
@@ -118,7 +118,7 @@ System.NullReferenceException: Object reference not set to an instance of an obj
 UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 ```
 
-#### 2)
+### 2)
 ```C#
 BuildFailedException: Incremental Player build failed!
 UnityEditor.Modules.BeeBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
@@ -127,12 +127,12 @@ UnityEditor.Android.AndroidBuildPostprocessor.PostProcess (UnityEditor.Modules.B
 UnityEditor.PostprocessBuildPlayer.Postprocess (UnityEditor.BuildTargetGroup targetGroup, UnityEditor.BuildTarget target, System.Int32 subtarget, System.String installPath, System.String companyName, System.String productName, System.Int32 width, System.Int32 height, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
 UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr, Boolean&)
 ```
-#### 3)
+### 3)
 ```C#
 Build completed with a result of 'Failed' in 2 seconds (2130 ms)
 UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 ```
-#### 4)
+### 4)
 ```C#
 UnityEditor.BuildPlayerWindow+BuildMethodException: 3 errors
   at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002da] in <2adcb7d86536472884d6a11c9ab8e115>:0 
