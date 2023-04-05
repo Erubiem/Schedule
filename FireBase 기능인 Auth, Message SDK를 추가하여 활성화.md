@@ -43,11 +43,11 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기
 
 ## 1) 준비 작업
 
- - 1. 유니티 허브를 들어가서 에디터 설치를 클릭<br><br>
+ - 1. 유니티 허브를 들어가서 에디터 설치를 클릭<br><br><br>
   <img src="image/Fire1.PNG" width="100%"><br>
- - 2. 현재 기준으로 정식 릴리스 칸에 없기 때문에 아카이브 칸으로 가서 아카이브 웹페이지로 이동한다. (현재 2023.04.05)<br><br>
+ - 2. 현재 기준으로 정식 릴리스 칸에 없기 때문에 아카이브 칸으로 가서 아카이브 웹페이지로 이동한다. (현재 2023.04.05)<br><br><br>
   <img src="image/Fire2.PNG" width="100%"><br>
- - 3. 그리고 Unity 2022.1.24라고 쓰인 곳으로 가보면 Unity Hub라는 단추를 누르면<br><br> 
+ - 3. 그리고 Unity 2022.1.24라고 쓰인 곳으로 가보면 Unity Hub라는 단추를 누르면<br><br><br>
   <img src="image/Fire3.PNG" width="100%"><br>
  - 4. 모듈 설치 선택상자에서 Android build Support 와 iOS build Support 꼭 체크하도록 한다.<br><br><br> 
   <img src="image/Fire4.PNG" width="100%"><br> 
@@ -72,24 +72,24 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
  <img src="image/Fire5.PNG" width="100%"><br> 
 
  - FirebaseAuth를 현재 유니티에 임포트한다.
-그리고 다운받은 google-signnin-unity를 추가할텐데 붉은 색 원안에 있는 것을 다운을 받았으면. <br> <br>
+그리고 다운받은 google-signnin-unity를 추가할텐데 붉은 색 원안에 있는 것을 다운을 받았으면. <br> <br><br>
  <img src="image/Fire6.PNG" width="100%"><br> 
- - 구글 로그인 패키지을 임포트를 해야 되는데 여기서 주의할 점이 있다. <br> <br>
+ - 구글 로그인 패키지을 임포트를 해야 되는데 여기서 주의할 점이 있다. <br> <br><br>
  <img src="image/Fire7.PNG" width="100%"><br> 
  - 유니티에 뜨는 임포트 창에서 “Unity.Compat.dll”과 “Unity.Tasks.dll”을 제외 시켜준다.
-그리고 임포트를 해주면 오류가 뜨는데 <br> <br>
+그리고 임포트를 해주면 오류가 뜨는데 <br> <br><br>
  <img src="image/Fire8.PNG" width="100%"><br> 
- - 이럴 땐 “Google.VersionHandler”와 “Google.VersionHandlerImpl_v1.2.89.0”를 삭제해주면 된다. <br> <br>
- <img src="image/Fire9.PNG" width="100%"><br>
-<img src="image/Fire10.PNG" width="100%"><br>
- - 그리고 나머지는 "https://cafe.naver.com/sesisoftdev.cafe?iframe_url=/ArticleRead.nhn?articleid=20" 여기서 말하는대로 세팅하고 테스트를 하면 되는데<br> <br>
+ - 이럴 땐 “Google.VersionHandler”와 “Google.VersionHandlerImpl_v1.2.89.0”를 삭제해주면 된다. <br> <br><br>
+ <img src="image/Fire9.PNG" width="100%"><br><br>
+<img src="image/Fire10.PNG" width="100%"><br><br>
+ - 그리고 나머지는 "https://cafe.naver.com/sesisoftdev.cafe?iframe_url=/ArticleRead.nhn?articleid=20" 여기서 말하는대로 세팅하고 테스트를 하면 되는데<br> <br><br>
 
-<img src="image/Fire11.PNG" width="100%"><br>
+<img src="image/Fire11.PNG" width="100%"><br><br>
 - AnonyOfChange.cs를 다운 받고 유니티로 넣었을 때 이런 오류가 생길 수 있다.
  - 그럴 땐 8줄에 있는 Using Firebase.Unity.Editor;를 주석 처리하고 나면 또 다른 이슈가 생기는데
- - Login.cs에서 EmailCreatePanel이 없을 때 나타나는 오류다.<br> <br>
+ - Login.cs에서 EmailCreatePanel이 없을 때 나타나는 오류다.<br> <br><br>
 
-<img src="image/Fire12.PNG" width="100%"><br>
+<img src="image/Fire12.PNG" width="100%"><br><br>
  - 이럴 때는 간단히 코드에 public GameObject EmailCreatePanel; 을 넣어준다면 해결이 가능하다.
 
 그렇게 유저 인증을 마치게 된다면 푸시 기능으로 넘어가보자.
