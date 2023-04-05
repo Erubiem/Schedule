@@ -64,8 +64,12 @@ https://cafe.naver.com/sesisoftdev.cafe?iframe_url=/ArticleRead.nhn?articleid=20
 
 https://cafe.naver.com/sesisoftdev/27
 
+Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase_unity_sdk 폴더로 간 후 firebase sdk 를 추가한다. <br>
+                                                                                                         
 
 
+먼저 FirebaseAuth.unitypackage를 추가할텐데
+ <img src="image/Fire5.PNG" width="100%"><br> 
 
 
 ### 유니티 에러
