@@ -95,11 +95,13 @@ Login.cs에서 EmailCreatePanel이 없을 때 나타나는 오류다.<br> <br>
 그렇게 유저 인증을 마치게 된다면 푸시 기능으로 넘어가보자.
 
 
-3.	FireBase Unity3D 푸시 기능 사용(2023.04.05)
+## 3)	FireBase Unity3D 푸시 기능 사용
 
 "https://cafe.naver.com/sesisoftdev/37"을 기반으로 제작한다.
 
 
+여기선 네이버 블로그에서 쓰여진 대로 따라가면 되는데 딱 하나 오류가 생길 수 있다.
+만약 유니티에선 실행을 해도 괜찮은데 안드로이드로 빌드를 할 때 오류가 생겨서 막히는 경우가 있는 데
 
 ### 유니티 에러
 
@@ -138,4 +140,31 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 
 ```
 
+PC로 실행할 때는 몰랐지만, 안드로이드로 빌드를 할 때 이러한 오류가 생길 수 있는데 
+이것이 일어난 이유로는 Firebase Cloud Messaging (FCM) SDK를 Android 프로젝트에 추가했을 때, AndroidManifest.xml 파일이 수정되고 기존 AndroidManifest.xml 파일에서 사용 중인 스타일 테마와 충돌하는 경우가 있다.
+이런 경우, SetFixedWindowSize() 관련 오류가 발생할 수 있는데,
+이 문제를 해결하기 위해서는 AndroidManifest.xml 파일에서 FCM SDK를 추가하는 코드와 기존에 사용하던 코드들의 스타일 테마를 일치시켜야 해서.
+예를 들어, 기존의 액티비티 스타일 테마가 Theme.AppCompat.Light.DarkActionBar인 경우, FCM SDK를 추가하려면 Theme.AppCompat.Light.NoActionBar 스타일 테마를 사용해야 하기 때문에
 
+
+ - Assets/Plugins/Android/AndroidManifest.xml 여기에서 고쳐야한다.
+```C#
+<activity android:name="com.unity3d.player.UnityPlayerActivity"
+          android:theme="@style/UnityThemeSelector"
+          android:screenOrientation="landscape"
+          android:resizeableActivity="false">
+    <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+    <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+    <meta-data android:name="android.max_aspect" android:value="2.1" />
+    <meta-data android:name="android.support.PARENT_ACTIVITY"
+               android:value="com.unity3d.player.UnityPlayerActivity" />
+    <meta-data android:name="android.windowLayoutMode"
+               android:value="fullscreen" />
+</activity>
+
+```
+ - </activity> 밑에 코드를 추가한다면 오류가 사라지는 것을 볼 수 있다.
