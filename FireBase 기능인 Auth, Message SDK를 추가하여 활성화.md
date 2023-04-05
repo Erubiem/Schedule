@@ -82,6 +82,18 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
  - 이럴 땐 “Google.VersionHandler”와 “Google.VersionHandlerImpl_v1.2.89.0”를 삭제해주면 된다. <br> <br>
  <img src="image/Fire9.PNG" width="100%"><br>
 
+ - 그리고 나머지는 "https://cafe.naver.com/sesisoftdev.cafe?iframe_url=/ArticleRead.nhn?articleid=20" 여기서 말하는대로 세팅하고 테스트를 하면 되는데<br> <br>
+
+<img src="image/Fire10.PNG" width="100%"><br>
+- AnonyOfChange.cs를 다운 받고 유니티로 넣었을 때 이런 오류가 생길 수 있다.
+그럴 땐 8줄에 있는 Using Firebase.Unity.Editor;를 주석 처리하고 나면 또 다른 이슈가 생기는데
+Login.cs에서 EmailCreatePanel이 없을 때 나타나는 오류다.<br> <br>
+
+<img src="image/Fire11.PNG" width="100%"><br>
+
+<img src="image/Fire12.PNG" width="100%"><br>
+
+
 
 ### 유니티 에러
 
