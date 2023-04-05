@@ -55,6 +55,16 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기
 
 ## 2) FireBase Unity3D 유저 인증
 
+https://cafe.naver.com/sesisoftdev.cafe?iframe_url=/ArticleRead.nhn?articleid=20
+
+먼저 네이버 블로그에 있는 Firebase Setting 과정을 모두 진행한다.
+1부터 5번까지 진행하면 된다. 
+
+진행했다면 아래 링크를 참고하여 Unity3d Client Build Setting 을 각자 프로젝트에 맞게 세팅한다.
+
+https://cafe.naver.com/sesisoftdev/27
+
+
 
 
 
