@@ -58,7 +58,7 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기
 
 
 
-###유니티 
+### 유니티 에러
 
 1.
 ```C#
