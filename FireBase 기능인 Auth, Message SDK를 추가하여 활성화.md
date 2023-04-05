@@ -37,7 +37,7 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기
     3.	Android 버전으로 개발 중인 게임 프로젝트 (상관 없음)
 
 다운로드 링크
--> "https://github.com/googlesamples/google-signin-unity/releases" (google-sign 패키지) \
+-> "https://github.com/googlesamples/google-signin-unity/releases" (google-sign 패키지) <br>
 -> "https://firebase.google.com/download/unity?hl=ko" (Firebase 패키지)
 
 
