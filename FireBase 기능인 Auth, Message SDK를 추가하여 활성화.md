@@ -42,7 +42,7 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 및 오류 
 -> "https://firebase.google.com/download/unity?hl=ko" (Firebase 패키지)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-### AndroidManifest 
+### AndroidManifest 오류
 
  - 현재 오류가 난 경위는 이러하다.
  - SourceTree로 다른 사람의 프로젝트를 받고 그 위에 Firebase.Auth, google-Login, Firebase.Message를 Import를 했을 때 build를 했을 경우 오류가 생겼다.  
