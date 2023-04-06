@@ -50,8 +50,8 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 및 오류 
 
  - 그리고 밑에 유니티 에러를 써놓았다.
 
----------------------------------------------------------------------------------------------------------------------------------------------
-```
+
+
 ### 유니티 에러
 
 ### 1)
@@ -86,7 +86,7 @@ UnityEditor.BuildPlayerWindow+BuildMethodException: 3 errors
   at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <2adcb7d86536472884d6a11c9ab8e115>:0 
 UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 
-```
+
 ---------------------------------------------------------------------------------------------------------------------------------------------
  
  - 결과적으로 이런일은 Firebase.Massage를 임포트를 했을 경우 생겨나는 일이다.<br><br>
@@ -97,7 +97,7 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
  - 이 문제를 해결하기 위해서는 AndroidManifest.xml 파일에 다른 사람이 제작하던 프로젝트에 사용하던 코드들의 스타일 테마를 일치시키는 방향으로 코드를 수정한다.
 
  - 경로는 Assets/Plugins/Android/AndroidManifest.xml이고, 아래에는 예시이다.
- 
+``` 
 ```C#
 <activity android:name="com.unity3d.player.UnityPlayerActivity"
           android:theme="@style/UnityThemeSelector"
