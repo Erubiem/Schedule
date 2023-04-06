@@ -42,7 +42,7 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 및 오류 
 -> "https://firebase.google.com/download/unity?hl=ko" (Firebase 패키지)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-
+### AndroidManifest 
 
  - 현재 오류가 난 경위는 이러하다.
  - SourceTree로 다른 사람의 프로젝트를 받고 그 위에 Firebase.Auth, google-Login, Firebase.Message를 Import를 했을 때 build를 했을 경우 오류가 생겼다.  
@@ -88,7 +88,7 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 ```
 ---------------------------------------------------------------------------------------------------------------------------------------------
  - 결과적으로 이런일은 Firebase.Massage를 임포트를 했을 경우 생겨나는 일이다.<br><br>
- - Android.Manifest 속 activity에는 intent-filter 요소가 있으며, 이는 해당 activity가 메인 액티비티이자 런처 액티비티로 설정되어 있음을 나타내는데. 
+ - AndroidManifest 속 activity에는 intent-filter 요소가 있으며, 이는 해당 activity가 메인 액티비티이자 런처 액티비티로 설정되어 있음을 나타내는데. 
  - 앱이 실행될 때, 원래라면 FireBase.Message를 실행되어야 된다. 그러나 다른 사람한테 Firebase Cloud Messaging에서 제공하는 액티비티로 설정되어 있지 않으므로, 앱이 실행될 때 Firebase Cloud Messaging과 관련된 작업이 정상적으로 처리되지 않아 오류가 발생된다.
 
  - 그리고 서로의 설정이 , SetFixedWindowSize() 관련 오류가 발생할 수 있는데,
