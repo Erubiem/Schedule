@@ -1,4 +1,4 @@
-# FireBase 기능인 Auth, Message SDK를 추가하여 활성화 및 오류 해결
+# AndroidManifest 오류와 FireBase 기능인 Auth, Message SDK를 추가하여 활성화 
 
 ---
 
@@ -42,6 +42,7 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 및 오류 
 -> "https://firebase.google.com/download/unity?hl=ko" (Firebase 패키지)
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
+## AndroidManifest 오류
 ```
 ### AndroidManifest 오류
 
