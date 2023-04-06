@@ -1,4 +1,4 @@
-# FireBase 기능인 Auth, Message SDK를 추가하여 활성화
+# FireBase 기능인 Auth, Message SDK를 추가하여 활성화 및 오류 해결
 
 ---
 
@@ -14,7 +14,7 @@
 
 ---
 
-FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 
+FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 및 오류 해결
 
 <aside>
 ⚠️ 작성시기 2023년 04월
@@ -22,6 +22,7 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기
 </aside>
 
 <aside>
+  
 ⚠️ Visual Studio 2022, Unity에서 진행되었습니다.
 
 </aside>
@@ -40,7 +41,90 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기
 -> "https://github.com/googlesamples/google-signin-unity/releases" (google-sign 패키지) <br>
 -> "https://firebase.google.com/download/unity?hl=ko" (Firebase 패키지)
 
+---------------------------------------------------------------------------------------------------------------------------------------------
 
+
+ - 현재 오류가 난 경위는 이러하다.
+ - SourceTree로 다른 사람의 프로젝트를 받고 그 위에 Firebase.Auth, google-Login, Firebase.Message를 Import를 했을 때 build를 했을 경우 오류가 생겼다.  
+
+ - 그리고 밑에 유니티 에러를 써놓았다.
+
+---------------------------------------------------------------------------------------------------------------------------------------------
+
+### 유니티 에러
+
+### 1)
+```C#
+Building Library\Bee\artifacts\Android\Manifest\LauncherManifestDiag.txt failed with output:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Unity.Android.Gradle.AndroidManifest.SetFixedWindowSize(String activity, Int32 defaultWidth, Int32 defaultHeight, Int32 minimumWidth, Int32 minimumHeight)
+   at AndroidPlayerBuildProgram.Actions.GenerateManifests.PatchLibraryManifest(AndroidManifest manifest, ManifestDiagnostics diagnostics)
+   at AndroidPlayerBuildProgram.Actions.GenerateManifests..ctor(Arguments arguments)
+   at AndroidPlayerBuildProgram.Actions.GenerateManifests.Run(CSharpActionContext context, Arguments arguments)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+```
+
+### 2)
+```C#
+BuildFailedException: Incremental Player build failed!
+UnityEditor.Modules.BeeBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
+UnityEditor.Modules.DefaultBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
+UnityEditor.Android.AndroidBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at <7e22973cbf66497e9da4d9832ba208e4>:0)
+UnityEditor.PostprocessBuildPlayer.Postprocess (UnityEditor.BuildTargetGroup targetGroup, UnityEditor.BuildTarget target, System.Int32 subtarget, System.String installPath, System.String companyName, System.String productName, System.Int32 width, System.Int32 height, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
+UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr, Boolean&)
+```
+### 3)
+```C#
+Build completed with a result of 'Failed' in 2 seconds (2130 ms)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+```
+### 4)
+```C#
+UnityEditor.BuildPlayerWindow+BuildMethodException: 3 errors
+  at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002da] in <2adcb7d86536472884d6a11c9ab8e115>:0 
+  at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <2adcb7d86536472884d6a11c9ab8e115>:0 
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+
+```
+---------------------------------------------------------------------------------------------------------------------------------------------
+ - 결과적으로 이런일은 Firebase.Massage를 임포트를 했을 경우 생겨나는 일이다.<br><br>
+ - Android.Manifest 속 activity에는 intent-filter 요소가 있으며, 이는 해당 activity가 메인 액티비티이자 런처 액티비티로 설정되어 있음을 나타내는데. 
+ - 앱이 실행될 때, 원래라면 FireBase.Message를 실행되어야 된다. 그러나 다른 사람한테 Firebase Cloud Messaging에서 제공하는 액티비티로 설정되어 있지 않으므로, 앱이 실행될 때 Firebase Cloud Messaging과 관련된 작업이 정상적으로 처리되지 않아 오류가 발생된다.
+
+ - 그리고 서로의 설정이 , SetFixedWindowSize() 관련 오류가 발생할 수 있는데,
+ - 이 문제를 해결하기 위해서는 AndroidManifest.xml 파일에 다른 사람이 제작하던 프로젝트에 사용하던 코드들의 스타일 테마를 일치시키는 방향으로 코드를 수정한다.
+
+ - 경로는 Assets/Plugins/Android/AndroidManifest.xml이고, 아래에는 예시이다.
+```C#
+<activity android:name="com.unity3d.player.UnityPlayerActivity"
+          android:theme="@style/UnityThemeSelector"
+          android:screenOrientation="landscape"
+          android:resizeableActivity="false">
+    <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+    <intent-filter>
+        <action android:name="android.intent.action.MAIN" />
+        <category android:name="android.intent.category.LAUNCHER" />
+    </intent-filter>
+    <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
+    <meta-data android:name="android.max_aspect" android:value="2.1" />
+    <meta-data android:name="android.support.PARENT_ACTIVITY"
+               android:value="com.unity3d.player.UnityPlayerActivity" />
+    <meta-data android:name="android.windowLayoutMode"
+               android:value="fullscreen" />
+</activity>
+
+```
+ - </activity> 밑에 맞는 맞는 설정과 코드를 추가한다면 오류가 사라지는 것을 볼 수 있다.
+
+
+
+
+
+
+
+
+
+---------------------------------------------------------------------------------------------------------------------------------------------
 ## 1) 준비 작업
 
  - 1. 유니티 허브를 들어가서 에디터 설치를 클릭<br><br><br>
@@ -100,72 +184,3 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
 "https://cafe.naver.com/sesisoftdev/37"을 기반으로 제작한다.
 
 
-여기선 네이버 블로그에서 쓰여진 대로 따라가면 되는데 딱 하나 오류가 생길 수 있다.
-만약 유니티에선 실행을 해도 괜찮은데 안드로이드로 빌드를 할 때 오류가 생겨서 막히는 경우가 있는데
-
----------------------------------------------------------------------------------------------------------------------------------------------
-
-### 유니티 에러
-
-### 1)
-```C#
-Building Library\Bee\artifacts\Android\Manifest\LauncherManifestDiag.txt failed with output:
-System.NullReferenceException: Object reference not set to an instance of an object.
-   at Unity.Android.Gradle.AndroidManifest.SetFixedWindowSize(String activity, Int32 defaultWidth, Int32 defaultHeight, Int32 minimumWidth, Int32 minimumHeight)
-   at AndroidPlayerBuildProgram.Actions.GenerateManifests.PatchLibraryManifest(AndroidManifest manifest, ManifestDiagnostics diagnostics)
-   at AndroidPlayerBuildProgram.Actions.GenerateManifests..ctor(Arguments arguments)
-   at AndroidPlayerBuildProgram.Actions.GenerateManifests.Run(CSharpActionContext context, Arguments arguments)
-UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
-```
-
-### 2)
-```C#
-BuildFailedException: Incremental Player build failed!
-UnityEditor.Modules.BeeBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
-UnityEditor.Modules.DefaultBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
-UnityEditor.Android.AndroidBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at <7e22973cbf66497e9da4d9832ba208e4>:0)
-UnityEditor.PostprocessBuildPlayer.Postprocess (UnityEditor.BuildTargetGroup targetGroup, UnityEditor.BuildTarget target, System.Int32 subtarget, System.String installPath, System.String companyName, System.String productName, System.Int32 width, System.Int32 height, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
-UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr, Boolean&)
-```
-### 3)
-```C#
-Build completed with a result of 'Failed' in 2 seconds (2130 ms)
-UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
-```
-### 4)
-```C#
-UnityEditor.BuildPlayerWindow+BuildMethodException: 3 errors
-  at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002da] in <2adcb7d86536472884d6a11c9ab8e115>:0 
-  at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <2adcb7d86536472884d6a11c9ab8e115>:0 
-UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
-
-```
----------------------------------------------------------------------------------------------------------------------------------------------
- - PC로 실행할 때는 몰랐지만, 안드로이드로 빌드를 할 때 이러한 오류가 생길 수 있는데 
- - 이것이 일어난 이유로는 Firebase Cloud Messaging (FCM) SDK를 Android 프로젝트에 추가했을 때, AndroidManifest.xml 파일이 수정되고 기존 AndroidManifest.xml 파일에서 사용 중인   - 스타일 테마와 충돌하는 경우가 있다.
- - 이런 경우, SetFixedWindowSize() 관련 오류가 발생할 수 있는데,
- - 이 문제를 해결하기 위해서는 AndroidManifest.xml 파일에서 FCM SDK를 추가하는 코드와 기존에 사용하던 코드들의 스타일 테마를 일치시켜야 해서.
- - 예를 들어, 기존의 액티비티 스타일 테마가 Theme.AppCompat.Light.DarkActionBar인 경우, FCM SDK를 추가하려면 Theme.AppCompat.Light.NoActionBar 스타일 테마를 사용해야 하기 때문에
-
-
- - Assets/Plugins/Android/AndroidManifest.xml 여기에서 고쳐야한다.
-```C#
-<activity android:name="com.unity3d.player.UnityPlayerActivity"
-          android:theme="@style/UnityThemeSelector"
-          android:screenOrientation="landscape"
-          android:resizeableActivity="false">
-    <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
-    <intent-filter>
-        <action android:name="android.intent.action.MAIN" />
-        <category android:name="android.intent.category.LAUNCHER" />
-    </intent-filter>
-    <meta-data android:name="unityplayer.UnityActivity" android:value="true" />
-    <meta-data android:name="android.max_aspect" android:value="2.1" />
-    <meta-data android:name="android.support.PARENT_ACTIVITY"
-               android:value="com.unity3d.player.UnityPlayerActivity" />
-    <meta-data android:name="android.windowLayoutMode"
-               android:value="fullscreen" />
-</activity>
-
-```
- - </activity> 밑에 코드를 추가한다면 오류가 사라지는 것을 볼 수 있다.
