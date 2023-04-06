@@ -85,10 +85,10 @@ UnityEditor.BuildPlayerWindow+BuildMethodException: 3 errors
   at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002da] in <2adcb7d86536472884d6a11c9ab8e115>:0 
   at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <2adcb7d86536472884d6a11c9ab8e115>:0 
 UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
-
+```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
- 
+ ```
  - 결과적으로 이런일은 Firebase.Massage를 임포트를 했을 경우 생겨나는 일이다.<br><br>
  - AndroidManifest 속 activity에는 intent-filter 요소가 있으며, 이는 해당 activity가 메인 액티비티이자 런처 액티비티로 설정되어 있음을 나타내는데. 
  - 앱이 실행될 때, 원래라면 FireBase.Message를 실행되어야 된다. 그러나 다른 사람한테 Firebase Cloud Messaging에서 제공하는 액티비티로 설정되어 있지 않으므로, 앱이 실행될 때 Firebase Cloud Messaging과 관련된 작업이 정상적으로 처리되지 않아 오류가 발생된다.
