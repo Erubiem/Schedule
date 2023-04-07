@@ -237,14 +237,16 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
  - 블로그에 써져 있는 내용이 현재 거의 오류가 없지만, 시간이 지나면서 바뀐 것을 알려주도록 하겠다.
  
  - 1. 먼저 FireBase Message는 그냥 Message로 바뀌었다.
- - 
+<img src="image/Message1.PNG" width="100%"><br><br>
  - 2. 새 캠페인을 들어가면 알림과 인앱 메시지가 있는데 대략적으로 설명하면 알림은 핸드폰 상단바에 있는 메시지같은 것이고, 인앱 메시지는 재난 문자라고 생각하면 편하다.
  - 
  - 3. 일단 알림으로 실험을 할 것인데 중요한 것은 단 두가지로 볼 수 있다.
  - 4. 타겟과 예약이다. 먼저 타겟은 어떤 프로젝트와 어떤 종류의 핸트폰을 선택하여 메시징을 보낼 지 선택할 수 있다.
+  <img src="image/Message2.PNG" width="100%"><br><br>
  - 5. 예약은 지금 보낼 지 예약을 해서 기간을 정할 수 있다.
+  <img src="image/Message4.PNG" width="100%"><br><br>
  - 6. 그렇게 설정을 해서 보내는데 성공을 한다면 내가 정한 제목의 캠페인에서 몇 개의 메시지가 전송에 성공했다는 말을 볼 수 있다.
- -  
+ <img src="image/Message3.PNG" width="100%"><br><br>
 
 
 
