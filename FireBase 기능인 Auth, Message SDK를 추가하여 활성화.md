@@ -99,8 +99,8 @@ AndroidManifest란?
 ```
 
  - 현재 오류가 난 경위는 이러하다.
- - SourceTree로 다른 사람의 프로젝트를 받고 그 위에 Firebase.Auth, google-Login, Firebase.Message를 Import를 했을 때 build를 했을 경우 오류가 생겼다.  
- - 밑에 유니티 에러를 써놓았다.
+ - SourceTree로 다른 사람의 프로젝트를 받고 그 위에 Firebase.Auth, google-Login, Firebase.Message를 Import를 했을 때 build를 했을 경우 오류가 생겼다.   
+ - 밑에 어떤 유니티 에러가 나왔는지 써놓았다.
 
 
 ### 유니티 에러
@@ -172,12 +172,6 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 
 
 
-
-
-
-
-
-
 ---------------------------------------------------------------------------------------------------------------------------------------------
 ## 준비 작업
 
@@ -189,6 +183,7 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
   <img src="image/Fire3.PNG" width="100%"><br>
  - 4. 모듈 설치 선택상자에서 Android build Support 와 iOS build Support 꼭 체크하도록 한다.<br><br><br> 
   <img src="image/Fire4.PNG" width="100%"><br> 
+  
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 ## FireBase Unity3D 유저 인증
