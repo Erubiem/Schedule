@@ -252,7 +252,18 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
 
 
  - 이 부분은 유저인증 이후에 진행되는 부분입니다. 
- - 
+ - FireBase Unity3D 유저 인증을 진행했다면, 게스트로그인까지 성공을 했지만 구글로그인이 안되었을 수도 있다.
+ - 안드로이드로 APK로 빌드를 해봐도 파이어베이스에 저장이 안되었다면 이걸 살펴보자.
+
+
+ <img src="image/Login1.PNG" width="100%"><br><br>
+ 
+ - 구글 로그인이 파이어베이스로 저장하게 하려면 Authentication -> sign in method 로 가서 새로운 제공업체를 추가해줘야 한다.
+ - 만약 구글 제공업체를 추가를 하지 않는다면 파이어베이스는 구글 로그인을 제공하지 않는다.
+ - 구글을 추가를 하고 로그인을 하면 아래의 사진처럼 구글 로그인이 추가가 된 것을 볼 수 있다.
+
+
+ <img src="image/Login2.PNG" width="100%"><br><br>
 
 
 
