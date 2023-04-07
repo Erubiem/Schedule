@@ -45,7 +45,9 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 및 오류 
 
 ## 목차
 
-- [1) 준비 작업](#준비-작업)
+- [준비 작업](#준비-작업)
+- [FireBase Unity3D 유저 인증](#FireBase-Unity3D-유저-인증)
+- [FireBase Unity3D 푸시 기능 사용](#FireBase-Unity3D-푸시-기능-사용)
 
 
 
@@ -171,7 +173,7 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
   <img src="image/Fire4.PNG" width="100%"><br> 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
-## 2) FireBase Unity3D 유저 인증
+## FireBase Unity3D 유저 인증
 
 https://cafe.naver.com/sesisoftdev.cafe?iframe_url=/ArticleRead.nhn?articleid=20
 
@@ -213,7 +215,7 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
 그렇게 유저 인증을 마치게 된다면 푸시 기능으로 넘어가보자.
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-## 3)	FireBase Unity3D 푸시 기능 사용
+## FireBase Unity3D 푸시 기능 사용
 
 "https://cafe.naver.com/sesisoftdev/37"을 기반으로 제작한다.
 
