@@ -96,15 +96,10 @@ AndroidManifest란?
 
 ```
 
-```
-### AndroidManifest 오류
-
  - 현재 오류가 난 경위는 이러하다.
  - SourceTree로 다른 사람의 프로젝트를 받고 그 위에 Firebase.Auth, google-Login, Firebase.Message를 Import를 했을 때 build를 했을 경우 오류가 생겼다.  
-
  - 밑에 유니티 에러를 써놓았다.
 
-```
 
 ### 유니티 에러
 
