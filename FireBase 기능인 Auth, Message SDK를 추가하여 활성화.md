@@ -45,9 +45,9 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 및 오류 
 
 ## 목차
 
-- [1) 준비 작업](#1-------)
+- [1) 준비 작업](#-1.-준비-작업)
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 
 
 
@@ -159,7 +159,7 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
-## 1) 준비 작업
+## 1. 준비 작업
 
  - 1. 유니티 허브를 들어가서 에디터 설치를 클릭<br><br><br>
   <img src="image/Fire1.PNG" width="100%"><br>
