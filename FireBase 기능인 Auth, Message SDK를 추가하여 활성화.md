@@ -140,7 +140,7 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 ```
 
 ---------------------------------------------------------------------------------------------------------------------------------------------
- ```
+
  - 결과적으로 이런일은 Firebase.Massage를 임포트를 했을 경우 생겨나는 일이다.
  - AndroidManifest 속 activity에는 intent-filter 요소가 있으며, 이는 해당 activity가 메인 액티비티이자 런처 액티비티로 설정되어 있음을 나타내는데. 
  - 앱이 실행될 때, 원래라면 FireBase.Message를 실행되어야 된다. 그러나 다른 사람한테 Firebase Cloud Messaging에서 제공하는 액티비티로 설정되어 있지 않으므로, 앱이 실행될 때 Firebase Cloud Messaging과 관련된 작업이 정상적으로 처리되지 않아 오류가 발생된다.
@@ -149,7 +149,7 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
  - 이 문제를 해결하기 위해서는 AndroidManifest.xml 파일에 다른 사람이 제작하던 프로젝트에 사용하던 코드들의 스타일 테마를 일치시키는 방향으로 코드를 수정한다.
 
  - 경로는 Assets/Plugins/Android/AndroidManifest.xml이고, 아래에는 예시이다.
-``` 
+
 ```C#
 <activity android:name="com.unity3d.player.UnityPlayerActivity"
           android:theme="@style/UnityThemeSelector"
