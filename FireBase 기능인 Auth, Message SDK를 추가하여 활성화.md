@@ -49,6 +49,7 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 및 오류 
 - [FireBase Unity3D 유저 인증](#FireBase-Unity3D-유저-인증)
 - [FireBase Unity3D 푸시 기능 사용](#FireBase-Unity3D-푸시-기능-사용)
 - [게스트 로그인, 구글 로그인](#게스트-로그인-구글-로그인)
+- [Unity ADS 붙이기](#Unity-ADS-붙이기)
 
 
 
@@ -267,5 +268,16 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
 
 
 
+---------------------------------------------------------------------------------------------------------------------------------------------
+## Unity ADS 붙이기
 
+ - Unity Ads를 프로젝트에 추가합니다. 
+ - Unity Editor에서 "Window" 메뉴에서 "Package Manager"를 선택하고, "All Packages" 탭에서 "Unity Ads"를 검색하여 "Install" 버튼을 클릭합니다.
+ - Unity Ads를 사용할 씬에 "Unity Ads Manager"를 추가합니다. 
+ - 이를 위해서는 씬을 열고, "GameObject" 메뉴에서 "Unity Ads"를 선택한 다음, "Unity Ads Manager"를 클릭합니다.
 
+ - Unity Ads Manager의 Inspector 창에서, "Ads Id" 필드에 앱의 Unity Ads ID를 입력합니다. 이 ID는 Unity Ads 대시보드에서 생성할 수 있습니다.
+
+ - 필요한 경우, Unity Ads Manager에서 "Test Mode" 옵션을 선택합니다. 이 옵션을 선택하면, Unity Ads 서비스에서 제공하는 광고가 아닌 테스트 광고가 표시됩니다.
+
+ - Unity Ads를 호출할 코드를 작성합니다. 예를 들어, 다음과 같은 코드를 사용하여 보상형 동영상 광고를 로드하고, 재생할 수 있습니다. 
