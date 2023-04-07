@@ -239,7 +239,6 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
  - 1. 먼저 FireBase Message는 그냥 Message로 바뀌었다.
 <img src="image/Message1.PNG" width="100%"><br><br>
  - 2. 새 캠페인을 들어가면 알림과 인앱 메시지가 있는데 대략적으로 설명하면 알림은 핸드폰 상단바에 있는 메시지같은 것이고, 인앱 메시지는 재난 문자라고 생각하면 편하다.
- - 
  - 3. 일단 알림으로 실험을 할 것인데 중요한 것은 단 두가지로 볼 수 있다.
  - 4. 타겟과 예약이다. 먼저 타겟은 어떤 프로젝트와 어떤 종류의 핸트폰을 선택하여 메시징을 보낼 지 선택할 수 있다.
   <img src="image/Message2.PNG" width="100%"><br><br>
