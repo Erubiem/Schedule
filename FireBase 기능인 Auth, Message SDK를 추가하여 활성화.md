@@ -44,7 +44,7 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 및 오류 
 ---------------------------------------------------------------------------------------------------------------------------------------------
 
 ## 목차
-- [짚고 넘어가야할 오류](#AndroidManifest-오류)
+- [짚고 넘어가야할 오류(AndroidManifest)](#AndroidManifest-오류)
 - [준비 작업](#준비-작업)
 - [FireBase Unity3D 유저 인증](#FireBase-Unity3D-유저-인증)
 - [FireBase Unity3D 푸시 기능 사용](#FireBase-Unity3D-푸시-기능-사용)
