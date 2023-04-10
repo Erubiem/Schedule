@@ -432,9 +432,13 @@ public class GuestLoginManager : MonoBehaviour
 
  - Unity Ads를 호출할 코드를 작성합니다. 예를 들어, 다음과 같은 코드를 사용하여 보상형 동영상 광고를 로드하고, 재생할 수 있습니다. 
 
- - 만약 알 수 없이 씬 로드가 안되거나 데이터베이스 접속이 안되는 오류가 생겼다면 패키지 매니저를 확인해보자
+ - 만약 알 수 없이 씬 로드가 안되거나 데이터베이스 접속이 안되는 오류가 생겼다면 Ads Mediation이랑 Advertisement를 임포트를 하고 둘이 겹치는 부분이 생겼기 때문이다.
  <img src="image/Fire15.PNG" width="60%"><br><br><br>
- - 이렇게 Ads Mediation이랑 Advertisement이 겹친다면 오류가 생길 수 있으니 참고하자.
+ - 아마 그 오류는 버전에 따라 다르겠지만 Google Play Services의 Jetifier라는 기능과 관련이 있다. Jetifier는 안드로이드 앱에서 AndroidX 라이브러리를 사용할 때, 
+ - 이전 버전의 Support 라이브러리와 충돌을 방지하기 위해 사용되는데, 
+ - Jetifier 버전이 업데이트 되었으나 그에 따른 변경사항이 Ad Mediation 및 Advertisement 라이브러리와 충돌이 나서 발생하는 것이다.
+ - 하지만 광고 중계를 하려면 Ads Mediation이 필요할테니 해결 방법으로는 Google Play Services Resolver 라이브러리를 사용하여 Jetifier를 비활성화하거나, 
+ - 새로운 Jetifier 버전을 사용하는 것이 있다.
 
 
  <img src="image/Fire14.PNG" width="60%"><br><br><br>
