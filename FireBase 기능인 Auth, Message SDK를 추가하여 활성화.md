@@ -433,5 +433,6 @@ public class GuestLoginManager : MonoBehaviour
  - Unity Ads를 호출할 코드를 작성합니다. 예를 들어, 다음과 같은 코드를 사용하여 보상형 동영상 광고를 로드하고, 재생할 수 있습니다. 
 
 
-  <img src="image/Fire14.PNG" width="100%"><br>
-    <img src="image/Fire14_2.PNG" width="100%"><br>
+ <img src="image/Fire14.PNG" width="60%"><br><br><br>
+  
+ <img src="image/Fire14_2.PNG" width="60%"><br><br><br>
