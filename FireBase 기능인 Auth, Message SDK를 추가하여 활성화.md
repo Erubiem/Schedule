@@ -303,3 +303,7 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
  - 필요한 경우, Unity Ads Manager에서 "Test Mode" 옵션을 선택합니다. 이 옵션을 선택하면, Unity Ads 서비스에서 제공하는 광고가 아닌 테스트 광고가 표시됩니다.
 
  - Unity Ads를 호출할 코드를 작성합니다. 예를 들어, 다음과 같은 코드를 사용하여 보상형 동영상 광고를 로드하고, 재생할 수 있습니다. 
+
+
+  <img src="image/Fire14.PNG" width="100%"><br>
+    <img src="image/Fire14_2.PNG" width="100%"><br>
