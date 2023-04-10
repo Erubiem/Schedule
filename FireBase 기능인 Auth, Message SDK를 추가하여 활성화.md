@@ -117,8 +117,10 @@ AndroidManifest란?
 ```C#
 Building Library\Bee\artifacts\Android\Manifest\LauncherManifestDiag.txt failed with output:
 System.NullReferenceException: Object reference not set to an instance of an object.
-   at Unity.Android.Gradle.AndroidManifest.SetFixedWindowSize(String activity, Int32 defaultWidth, Int32 defaultHeight, Int32 minimumWidth, Int32 minimumHeight)
-   at AndroidPlayerBuildProgram.Actions.GenerateManifests.PatchLibraryManifest(AndroidManifest manifest, ManifestDiagnostics diagnostics)
+   at Unity.Android.Gradle.AndroidManifest.SetFixedWindowSize(String activity, 
+   Int32 defaultWidth, Int32 defaultHeight, Int32 minimumWidth, Int32 minimumHeight)
+   at AndroidPlayerBuildProgram.Actions.GenerateManifests.PatchLibraryManifest
+   (AndroidManifest manifest, ManifestDiagnostics diagnostics)
    at AndroidPlayerBuildProgram.Actions.GenerateManifests..ctor(Arguments arguments)
    at AndroidPlayerBuildProgram.Actions.GenerateManifests.Run(CSharpActionContext context, Arguments arguments)
 UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
@@ -127,10 +129,17 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 ### 2)
 ```C#
 BuildFailedException: Incremental Player build failed!
-UnityEditor.Modules.BeeBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
-UnityEditor.Modules.DefaultBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
-UnityEditor.Android.AndroidBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, UnityEditor.BuildProperties& outProperties) (at <7e22973cbf66497e9da4d9832ba208e4>:0)
-UnityEditor.PostprocessBuildPlayer.Postprocess (UnityEditor.BuildTargetGroup targetGroup, UnityEditor.BuildTarget target, System.Int32 subtarget, System.String installPath, System.String companyName, System.String productName, System.Int32 width, System.Int32 height, UnityEditor.BuildOptions options, UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
+UnityEditor.Modules.BeeBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args)
+(at <2adcb7d86536472884d6a11c9ab8e115>:0)
+UnityEditor.Modules.DefaultBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args,
+UnityEditor.BuildProperties& outProperties) (at <2adcb7d86536472884d6a11c9ab8e115>:0)
+UnityEditor.Android.AndroidBuildPostprocessor.PostProcess (UnityEditor.Modules.BuildPostProcessArgs args, 
+UnityEditor.BuildProperties& outProperties) (at <7e22973cbf66497e9da4d9832ba208e4>:0)
+UnityEditor.PostprocessBuildPlayer.Postprocess (UnityEditor.BuildTargetGroup targetGroup, 
+UnityEditor.BuildTarget target, System.Int32 subtarget, System.String installPath, System.String companyName,
+System.String productName, System.Int32 width, System.Int32 height, UnityEditor.BuildOptions options, 
+UnityEditor.RuntimeClassRegistry usedClassRegistry, UnityEditor.Build.Reporting.BuildReport report)
+(at <2adcb7d86536472884d6a11c9ab8e115>:0)
 UnityEngine.GUIUtility:ProcessEvent(Int32, IntPtr, Boolean&)
 ```
 ### 3)
@@ -141,8 +150,10 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 ### 4)
 ```C#
 UnityEditor.BuildPlayerWindow+BuildMethodException: 3 errors
-  at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer (UnityEditor.BuildPlayerOptions options) [0x002da] in <2adcb7d86536472884d6a11c9ab8e115>:0 
-  at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation, UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <2adcb7d86536472884d6a11c9ab8e115>:0 
+  at UnityEditor.BuildPlayerWindow+DefaultBuildMethods.BuildPlayer 
+  (UnityEditor.BuildPlayerOptions options) [0x002da] in <2adcb7d86536472884d6a11c9ab8e115>:0 
+  at UnityEditor.BuildPlayerWindow.CallBuildMethods (System.Boolean askForBuildLocation,
+  UnityEditor.BuildOptions defaultBuildOptions) [0x00080] in <2adcb7d86536472884d6a11c9ab8e115>:0 
 UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 ```
 
