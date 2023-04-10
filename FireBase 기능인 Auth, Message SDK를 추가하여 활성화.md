@@ -7,13 +7,13 @@
 💡 **HEADER**
 
 </aside>
+ 
+--- 
+
+# 개요 
 
 ---
-
-# 개요
-
----
-
+ 
 FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 및 오류 해결
 
 <aside>
@@ -275,6 +275,134 @@ Assets 메뉴 - Import Package - Custom Package 로 다운로드 받은 firebase
 
 
  - 이 부분은 유저인증 이후에 진행되는 부분입니다. 
+
+```C#
+using Firebase.Auth;
+using Google;
+using System.Threading.Tasks;
+using UnityEngine;
+using UnityEngine.SceneManagement;
+
+public class GuestLoginManager : MonoBehaviour
+{
+    private FirebaseAuth auth;
+    // 사용자 계정
+    FirebaseUser user = null;
+    private void Awake()
+    {
+        //auth = FirebaseAuth.DefaultInstance;
+        // 초기화
+        auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+
+        // 유저의 로그인 정보에 어떠한 변경점이 생기면 실행되게 이벤트를 걸어준다.
+        //auth.StateChanged += AuthStateChanged;
+        //AuthStateChanged(this, null);
+        if (auth.CurrentUser == null)
+        {
+            // If there is no current user, create a new guest user.
+            auth.SignInAnonymouslyAsync().ContinueWith(task => {
+                if (task.IsCanceled)
+                {
+                    Debug.LogError("Guest sign-in was canceled.");
+                    return;
+                }
+                if (task.IsFaulted)
+                {
+                    Debug.LogError("Guest sign-in encountered an error: " + task.Exception);
+                    return;
+                }
+
+                // Guest user created successfully. Load the main scene.
+                Debug.Log("Guest user signed in successfully.");
+                
+                //SceneManager.LoadScene("Main");
+            });
+        }
+        else
+        {
+            // If there is already a current user, go straight to the main scene.
+            Debug.Log("User already signed in. Skipping login.");
+      
+            //SceneManager.LoadScene("LobbyScene");
+        }
+    }
+    public void Start()
+    {
+        onAnonyToGoogle();
+    }
+    // 익명 로그인 -> 구글 로그인
+    public void onAnonyToGoogle()
+    {
+        auth = Firebase.Auth.FirebaseAuth.DefaultInstance;
+        if (auth.CurrentUser != null)
+        {
+            Debug.Log(auth.CurrentUser.UserId);
+
+            if (GoogleSignIn.Configuration == null)
+            {
+                GoogleSignIn.Configuration = new GoogleSignInConfiguration
+                {
+                    RequestIdToken = true,
+                    RequestEmail = true,
+                    // Copy this value from the google-service.json file.
+                    // oauth_client with type == 3
+                    WebClientId = ""
+                };
+
+            }
+            Task<GoogleSignInUser> signIn = GoogleSignIn.DefaultInstance.SignIn();
+            TaskCompletionSource<FirebaseUser> signInCompleted = new TaskCompletionSource<FirebaseUser>();
+
+            signIn.ContinueWith(task =>
+            {
+                if (task.IsCanceled)
+                {
+                    Debug.Log("Google Login task.IsCanceled");
+                }
+                else if (task.IsFaulted)
+                {
+                    Debug.Log("Google Login task.IsFaulted");
+                }
+                else
+                {
+                    Credential credential = Firebase.Auth.GoogleAuthProvider.GetCredential(((Task<GoogleSignInUser>)task).Result.IdToken, null);
+
+                    //string currentUserId = auth.CurrentUser.UserId;
+                    //string cureentEmail = auth.CurrentUser.Email;
+                    //string currentDisplayName = auth.CurrentUser.DisplayName;
+                    //System.Uri currentPhotoUrl = auth.CurrentUser.PhotoUrl;
+
+                    auth.CurrentUser.LinkWithCredentialAsync(credential).ContinueWith(authTask =>
+                    {
+                        if (authTask.IsCanceled)
+                        {
+                            signInCompleted.SetCanceled();
+                            Debug.Log("Google Login authTask.IsCanceled");
+                            return;
+                        }
+                        if (authTask.IsFaulted)
+                        {
+                            signInCompleted.SetException(authTask.Exception);
+                            Debug.Log("Google Login authTask.IsFaulted");
+                            return;
+                        }
+
+                        user = authTask.Result;
+                        Debug.LogFormat("Google User signed in successfully: {0} ({1})", user.DisplayName, user.UserId);
+                    });
+                }
+            });
+        }
+        else
+        {
+            Debug.Log("Not logged in");
+        }
+    }
+}
+
+```
+ - 위의 코드는 게스트 로그인을 하고 게스트 로그인이 되었을 때 구글로그인을 하는 코드이다.
+ - WebClientId 는 Firebase 사이트에서 받아오면 된다. 이 부분의 자세한 것은 유저 인증에 링크를 걸어놓았다.  
  - FireBase Unity3D 유저 인증을 진행했다면, 게스트로그인까지 성공을 했지만 구글로그인이 안되었을 수도 있다.
  - 안드로이드로 APK로 빌드를 해봐도 파이어베이스에 저장이 안되었다면 이걸 살펴보자.
 
