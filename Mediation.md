@@ -188,7 +188,7 @@ AdMob은 가능한 경우 자체 네트워크에서 광고를 게재할 인센�
 
 # - 레전드 오브 슬라임의 메디에이션 플랫폼
 
-https://www.is.com/community/case-studies/loadcomplete-raises-revenue-and-retention-with-luna/
+[레전드 오브 슬라임](https://www.is.com/community/case-studies/loadcomplete-raises-revenue-and-retention-with-luna/)
 
 위의 주소로 가서 살펴보면 레전드 오브 슬라임의 회사인 로드 컴플리트가 아이언 소스와 파트너쉽을 맺었다는 사실을 알 수 있는데.
 아이언 소스의 Luna를 통해서 원스톱 쇼핑 크리에이티브 솔루션을 받았다는 것을 볼 수 있다.
