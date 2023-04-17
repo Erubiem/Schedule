@@ -3,18 +3,23 @@
 ---
  
 Unity 프로젝트 안에 구글 애드몹 미디에이션을 붙이기
+
 --- 
+
 <aside>
 ⚠️ 작성시기 2023년 04월
 
 </aside>
+
 --- 
 <aside>
   
 ⚠️ Visual Studio 2022, Unity 2022.1.24f1에서 진행되었습니다.
 
 </aside>
+
 --- 
+
 <br><br><br>
 
 
