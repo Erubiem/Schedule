@@ -212,7 +212,7 @@
 
 위의 링크로 들어가보면 구글 애드몹에서 SDK를 붙이는 매뉴얼이 자세하게 적혀있는데
 
- <img src="image/Mediation9.png" width="60%"><br>
+ <img src="image/Mediation9.PNG" width="60%"><br>
 
 먼저 네모난 박스 안에 있는 링크로 들어가서 유니티패키지 파일을 받고 유니티에 임포트를 해준다.
 
