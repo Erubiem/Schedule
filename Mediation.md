@@ -138,8 +138,8 @@
 
 ##	메디에이션 플랫폼의 추천 순위는 다음과 같습니다.
 1.	[구글 애드몹(Google)](#2_2_1-google-admob)
-2.	[MAX(Applovin)](#max)
-3.	[IronSource(Unity)](#ironsource)
+2.	[MAX(Applovin)](#2_2_2.-max)
+3.	[IronSource(Unity)](#2_2_3.-ironsource)
 
 
 ##	메디에이션 플랫폼의 간략한 장단점입니다.
