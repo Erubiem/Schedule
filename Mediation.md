@@ -231,7 +231,7 @@
 
 [Admob 네트워크 선택](https://developers.google.com/admob/unity/choose-networks?hl=ko)
 
-
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
@@ -317,7 +317,7 @@ D7 수익을 의사 결정 지표로 사용하여 이제 어떤 크리에이티�
 
 
 <br><br><br>
-# 2. 의문 정리 <br><br><br>
+# 99. 의문 정리 <br><br><br>
 
 
 ##	Admob에는 자체 광고 네트워크가 있으므로 다른 광고 네트워크를 중재하여 얻을 수 있는 것은 무엇입니까?
@@ -339,4 +339,106 @@ AdMob은 가능한 경우 자체 네트워크에서 광고를 게재할 인센�
 ```
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+<br><br><br>
+# 100. 오류 정리 <br><br><br>
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+1. 초기화문제 
+
+ - 프로젝트에 있는 코드들 중 함수에서 사용되는 변수 중 하나가 null로 초기화 되지 않아서 오류가 발생할 수 있다.
+ ```
+ Building Library\Bee\artifacts\Android\Manifest\LauncherManifestDiag.txt failed with output:
+System.NullReferenceException: Object reference not set to an instance of an object.
+   at Unity.Android.Gradle.AndroidManifest.SetFixedWindowSize(String activity, Int32 defaultWidth, Int32 defaultHeight, Int32 minimumWidth, Int32 minimumHeight)
+   at AndroidPlayerBuildProgram.Actions.GenerateManifests.PatchLibraryManifest(AndroidManifest manifest, ManifestDiagnostics diagnostics)
+   at AndroidPlayerBuildProgram.Actions.GenerateManifests..ctor(Arguments arguments)
+   at AndroidPlayerBuildProgram.Actions.GenerateManifests.Run(CSharpActionContext context, Arguments arguments)
+UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
+외 3개의 오류들
+ ```
+
+그럴 경우엔 오류 메시지에 있는 문제들을 찾아서 집어넣어줘야하는데 
+
+Assets/Plugins/Android/AndroidManifest.xml 파일에서 코드를 추가해준다.
+
+```
+<manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.myapp">
+    <application>
+        <!-- 앱 구성 요소 및 기타 정보 -->
+    </application>
+    
+    <activity android:name=".MainActivity">
+        <!-- MainActivity의 기타 정보 -->
+        <meta-data android:name="unityplayer.ForwardNativeEventsToDalvik" android:value="true" />
+        
+        <!-- SetFixedWindowSize() 함수의 속성들 -->
+        <meta-data android:name="android.max_aspect" android:value="2.1" />
+        <meta-data android:name="android.min_aspect" android:value="1.86" />
+        <meta-data android:name="android.min_width" android:value="320" />
+        <meta-data android:name="android.min_height" android:value="480" />
+        <meta-data android:name="android.default_width" android:value="1080" />
+        <meta-data android:name="android.default_height" android:value="1920" />
+        <meta-data android:name="android.resizeableActivity" android:value="false" />
+    </activity>
+</manifest>
+
+```
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+2. 최적화 및 버전 관련 오류
+
+```
+Building Library\Bee\artifacts\Android\ManagedStripped failed with output: 
+C:\Program Files\Unity\Hub\Editor\2022.1.24f1\Editor\Data\il2cpp\build\deploy\UnityLinker.exe 
+--search-directory=C:/Users/SESI/Documents/mytestbase/MyTestT1/Library/Bee/Player
+```
+
+대강 이런 오류가 난다면 해당 프로젝트에 구 버전이 섞여있거나 시스템에 필요한 도구가 없어서 오류가 발생하는 경우가 대다수 입니다.
+이럴 경우에는 Burst를 활용하여 코드를 최적화로 만드는 것이 문제를 없앨 수 있습니다.
+
+먼저
+
+Window -> Package Manager 로 가서 왼쪽 상단에 Unity Registry를 선택해줍니다.
+
+[사진]
+
+그리고 오른쪽 상단에 burst를 검색해주고 Burst를 install 해주신다면 끝입니다.
+이제 실행을 하게 된다면 오류가 없어질 것인데 아직도 오류가 난다면 현재 말하고 있는 
+오류때문이 아닐 수 있으니 참고하시기 바랍니다.
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+3. SDK 호환 오류 및 버전 오류로 인한 AppLovin 호출이 불가
+
+만약 로그캣으로 광고를 클릭을 했는데 AppLovin은 준비가 안 되었다는 메시지가 뜰 수 있다.
+
+```
+AppLovinSdk [AppLovinSdk] Current SDK version (11.7.1) is outdated. Please integrate the latest version of the AppLovin SDK (11.9.0).
+Doing so will improve your CPMs and ensure you have access to the latest revenue earning features.
+```
+
+이럴 때는 메시지를 잘 살펴봐 주면 오류가 무슨 이유인지가 알 수 있는 데 지금은 SDK 버전 차이로 인한 문제라는 것을 알 수 있다.
+
+해결책은 AppLovinMediationDependencies 파일 속의 내용을 현재의 버전에 맞게 바꿔주면 된다.
+```
+<androidPackage spec="com.google.ads.mediation:applovin:'바꿔줄 버전'">
+```
+
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+4. GooglePlayGamesPlugin 오류 
+
+open the file Assets/GooglePlayGames/com.google.play.games/Editor/GooglePlayGamesPluginDependencies.xml
+
+* change line `Packages/com.google.play.games/Editor/m2repository` to `Assets/GooglePlayGames/com.google.play.games/Editor/m2repository`
+
+* run Android Force Resolve
+
 
