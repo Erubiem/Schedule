@@ -229,6 +229,7 @@
 광고 네트워크를 붙일 수 있다.<br>
 
 
+[Admob 네트워크 선택](https://developers.google.com/admob/unity/choose-networks?hl=ko)
 
 
 
