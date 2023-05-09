@@ -45,7 +45,7 @@
 3_4 해결책
 
 99. 의문 정리<br>
-
+100. 오류 정리<br>
 
 <br><br><br>
 
@@ -347,9 +347,9 @@ AdMob은 가능한 경우 자체 네트워크에서 광고를 게재할 인센�
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-1. 초기화문제 
+## 1. 초기화문제 
 
- - 프로젝트에 있는 코드들 중 함수에서 사용되는 변수 중 하나가 null로 초기화 되지 않아서 오류가 발생할 수 있다.
+ - 프로젝트에 있는 코드들 중 함수에서 사용되는 변수 중 하나가 null로 초기화 되지 않아서 오류가 발생할 수 있다.<br><br>
  ```
  Building Library\Bee\artifacts\Android\Manifest\LauncherManifestDiag.txt failed with output:
 System.NullReferenceException: Object reference not set to an instance of an object.
@@ -361,9 +361,9 @@ UnityEngine.GUIUtility:ProcessEvent (int,intptr,bool&)
 외 3개의 오류들
  ```
 
-그럴 경우엔 오류 메시지에 있는 문제들을 찾아서 집어넣어줘야하는데 
+그럴 경우엔 오류 메시지에 있는 문제들을 찾아서 집어넣어줘야하는데 <br><br>
 
-Assets/Plugins/Android/AndroidManifest.xml 파일에서 코드를 추가해준다.
+Assets/Plugins/Android/AndroidManifest.xml 파일에서 코드를 추가해준다.<br><br>
 
 ```
 <manifest xmlns:android="http://schemas.android.com/apk/res/android" package="com.example.myapp">
@@ -389,7 +389,7 @@ Assets/Plugins/Android/AndroidManifest.xml 파일에서 코드를 추가해준�
 ```
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-2. 최적화 및 버전 관련 오류
+## 2. 최적화 및 버전 관련 오류
 
 ```
 Building Library\Bee\artifacts\Android\ManagedStripped failed with output: 
@@ -397,33 +397,33 @@ C:\Program Files\Unity\Hub\Editor\2022.1.24f1\Editor\Data\il2cpp\build\deploy\Un
 --search-directory=C:/Users/SESI/Documents/mytestbase/MyTestT1/Library/Bee/Player
 ```
 
-대강 이런 오류가 난다면 해당 프로젝트에 구 버전이 섞여있거나 시스템에 필요한 도구가 없어서 오류가 발생하는 경우가 대다수 입니다.
-이럴 경우에는 Burst를 활용하여 코드를 최적화로 만드는 것이 문제를 없앨 수 있습니다.
+대강 이런 오류가 난다면 해당 프로젝트에 구 버전이 섞여있거나 시스템에 필요한 도구가 없어서 오류가 발생하는 경우가 대다수 입니다.<br><br>
+이럴 경우에는 Burst를 활용하여 코드를 최적화로 만드는 것이 문제를 없앨 수 있습니다.<br><br>
 
-먼저
+먼저<br><br>
 
-Window -> Package Manager 로 가서 왼쪽 상단에 Unity Registry를 선택해줍니다.
+Window -> Package Manager 로 가서 왼쪽 상단에 Unity Registry를 선택해줍니다.<br><br>
 
 [사진]
 
-그리고 오른쪽 상단에 burst를 검색해주고 Burst를 install 해주신다면 끝입니다.
-이제 실행을 하게 된다면 오류가 없어질 것인데 아직도 오류가 난다면 현재 말하고 있는 
-오류때문이 아닐 수 있으니 참고하시기 바랍니다.
+그리고 오른쪽 상단에 burst를 검색해주고 Burst를 install 해주신다면 끝입니다.<br><br>
+이제 실행을 하게 된다면 오류가 없어질 것인데 아직도 오류가 난다면 현재 말하고 있는 <br><br>
+오류때문이 아닐 수 있으니 참고하시기 바랍니다.<br><br>
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
-3. SDK 호환 오류 및 버전 오류로 인한 AppLovin 호출이 불가
+## 3. SDK 호환 오류 및 버전 오류로 인한 AppLovin 호출이 불가
 
-만약 로그캣으로 광고를 클릭을 했는데 AppLovin은 준비가 안 되었다는 메시지가 뜰 수 있다.
+만약 로그캣으로 광고를 클릭을 했는데 AppLovin은 준비가 안 되었다는 메시지가 뜰 수 있다.<br><br>
 
 ```
 AppLovinSdk [AppLovinSdk] Current SDK version (11.7.1) is outdated. Please integrate the latest version of the AppLovin SDK (11.9.0).
 Doing so will improve your CPMs and ensure you have access to the latest revenue earning features.
 ```
 
-이럴 때는 메시지를 잘 살펴봐 주면 오류가 무슨 이유인지가 알 수 있는 데 지금은 SDK 버전 차이로 인한 문제라는 것을 알 수 있다.
+이럴 때는 메시지를 잘 살펴봐 주면 오류가 무슨 이유인지가 알 수 있는 데 지금은 SDK 버전 차이로 인한 문제라는 것을 알 수 있다.<br><br>
 
-해결책은 AppLovinMediationDependencies 파일 속의 내용을 현재의 버전에 맞게 바꿔주면 된다.
+해결책은 AppLovinMediationDependencies 파일 속의 내용을 현재의 버전에 맞게 바꿔주면 된다.<br><br>
 ```
 <androidPackage spec="com.google.ads.mediation:applovin:'바꿔줄 버전'">
 ```
@@ -433,9 +433,9 @@ Doing so will improve your CPMs and ensure you have access to the latest revenue
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
 
-4. GooglePlayGamesPlugin 오류 
+## 4. GooglePlayGamesPlugin 오류 
 
-open the file Assets/GooglePlayGames/com.google.play.games/Editor/GooglePlayGamesPluginDependencies.xml
+open the file Assets/GooglePlayGames/com.google.play.games/Editor/GooglePlayGamesPluginDependencies.xml <br><br>
 
 * change line `Packages/com.google.play.games/Editor/m2repository` to `Assets/GooglePlayGames/com.google.play.games/Editor/m2repository`
 
