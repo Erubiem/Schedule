@@ -49,7 +49,7 @@ FireBase 기능인 Auth, Message SDK를 추가하여 활성화하기 및 오류 
 - [FireBase Unity3D 유저 인증](#FireBase-Unity3D-유저-인증)
 - [FireBase Unity3D 푸시 기능 사용](#FireBase-Unity3D-푸시-기능-사용)
 - [게스트 로그인, 구글 로그인](#게스트-로그인-구글-로그인)
-- [Unity ADS 붙이기](#Unity-ADS-붙이기)
+
 
 
 
@@ -416,31 +416,4 @@ public class GuestLoginManager : MonoBehaviour
 
  <img src="image/Login2.PNG" width="100%"><br><br>
 
-
-
----------------------------------------------------------------------------------------------------------------------------------------------
-## Unity ADS 붙이기
-
- - Unity Ads를 프로젝트에 추가합니다. 
- - Unity Editor에서 "Window" 메뉴에서 "Package Manager"를 선택하고, "All Packages" 탭에서 "Unity Ads"를 검색하여 "Install" 버튼을 클릭합니다.
- - Unity Ads를 사용할 씬에 "Unity Ads Manager"를 추가합니다. 
- - 이를 위해서는 씬을 열고, "GameObject" 메뉴에서 "Unity Ads"를 선택한 다음, "Unity Ads Manager"를 클릭합니다.
-
- - Unity Ads Manager의 Inspector 창에서, "Ads Id" 필드에 앱의 Unity Ads ID를 입력합니다. 이 ID는 Unity Ads 대시보드에서 생성할 수 있습니다.
-
- - 필요한 경우, Unity Ads Manager에서 "Test Mode" 옵션을 선택합니다. 이 옵션을 선택하면, Unity Ads 서비스에서 제공하는 광고가 아닌 테스트 광고가 표시됩니다.
-
- - Unity Ads를 호출할 코드를 작성합니다. 예를 들어, 다음과 같은 코드를 사용하여 보상형 동영상 광고를 로드하고, 재생할 수 있습니다. 
-
- - 만약 알 수 없이 씬 로드가 안되거나 데이터베이스 접속이 안되는 오류가 생겼다면 Ads Mediation이랑 Advertisement를 임포트를 하고 둘이 겹치는 부분이 생겼기 때문이다.<br>
- <img src="image/Fire15.PNG" width="60%"><br><br><br>
- - 아마 그 오류는 버전에 따라 다르겠지만 Google Play Services의 Jetifier라는 기능과 관련이 있다. Jetifier는 안드로이드 앱에서 AndroidX 라이브러리를 사용할 때, 
- - 이전 버전의 Support 라이브러리와 충돌을 방지하기 위해 사용되는데, 
- - Jetifier 버전이 업데이트 되었으나 그에 따른 변경사항이 Ad Mediation 및 Advertisement 라이브러리와 충돌이 나서 발생하는 것이다.
- - 하지만 광고 중계를 하려면 Ads Mediation이 필요할테니 해결 방법으로는 Google Play Services Resolver 라이브러리를 사용하여 Jetifier를 비활성화하거나, 
- - 새로운 Jetifier 버전을 사용하는 것이 있다.
-
-
- <img src="image/Fire14.PNG" width="60%"><br><br><br>
-  
- <img src="image/Fire14_2.PNG" width="60%"><br><br><br>
+>
