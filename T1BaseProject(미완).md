@@ -143,18 +143,18 @@ https://cafe.naver.com/sesisoftdev/25 <br>
 
 맞게 설정을 다 마쳤다면 이제 안드로이드로 빌드를 해보자.<br>
 
-<img src="image/FB2.PNG.PNG" width="60%"><br>
+<img src="image/FB2.PNG" width="60%"><br>
 <br>
 먼저 Login 버튼은 게스트 로그인이다. <br>
 이 버튼을 누르면 다음에 들어왔을 때도 토큰이 저장이 되어 있어서 게스트로그인이 유지가 된다.<br>
 
-<img src="image/FB3.PNG.PNG" width="60%"><br>
+<img src="image/FB3.PNG" width="60%"><br>
 <br>
 다음은 게스트 로그인을 구글 로그인으로 바꾸는 버튼이다.<br>
 게스트로그인을 하고 이 버튼을 누르면 게스트가 구글로 바뀔 것이다<br>
 참고로 앱에서 빌드를 해야만 구글 로그인이 가능하다.<br>
 <br>
-<img src="image/FB4.PNG.PNG" width="60%"><br>
+<img src="image/FB4.PNG" width="60%"><br>
 <br>
 마지막으로 게스트 로그인을 이메일 로그인으로 바꾸는 것이다.<br>
 지금은 그냥 이메일 형식만 갖춰있어도 이메일로그인으로 바뀌는 것이 가능하지만,<br>
