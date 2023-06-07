@@ -118,7 +118,7 @@ https://cafe.naver.com/sesisoftdev/25 <br>
 업적, 이벤트, 리더보드, 설정 창들 중 어디든 리소스 보기가 있고 다 똑같으니 리소스 보기를 눌러서 <br>
 코드를 복사해준다.
 
-<img src="image/GameService11.PNG" width="60%"><br>
+<img src="image/GameService11.png" width="60%"><br>
 
 그런 다음 위의 사진에 있는 경로에 따라서 Android Setup에 들어가 주게 되면 <br>
 
