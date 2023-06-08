@@ -167,9 +167,30 @@ https://cafe.naver.com/sesisoftdev/25 <br>
 
 # 4 구글 시트 파싱 (Parsing Scene)<br>
 
+현재 이 씬에는 두 개의 스크립트가 있다. 
+GoogleSheetData, GlobalData 시트가 있는데 
+말하자면
+GoogleSheetData는 원하는 구글 스프레드 시트에서 데이터를 가져오는 곳,
+GlobalData는 딕셔너리를 통해 저장하는 곳이다.
+
+
+<img src="image/Parsing_1.PNG" width="60%"><br>
+
+이 스크립트는 현재 다른 구글 스프레드 시트를 지정하고 있지만 현재 자신이 원하는 
+시트를 찾아서 바꾸고 코드를 작성하면 된다.
+
 
 
 # 5 구글 클라우드 JSON 세이브로드 (SaveLoad Scene)<br>
+
+이 것은 구글 클라우드와 유니티를 연결시켜서 저장시키는 것이다.
+그러니 먼저 다운로드를 받아야하는 것이 있기도하다.
+
+왜냐면 그렇게 
+
+
+
+
 
 
 
