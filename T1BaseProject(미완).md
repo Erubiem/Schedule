@@ -45,7 +45,7 @@
 
 # 1 광고 메디에이션(ADS Scene) <br>
 
-광고 메디에이션을 등록시키려면 밑에 있는 설명서를 참고한다.
+광고 메디에이션을 등록시키려면 밑에 있는 설명서를 참고한다.<br><br>
 [광고 메디에이션](https://github.com/SesisoftTFT/Schedule/blob/main/Mediation.md)
 
 
