@@ -35,23 +35,23 @@ AppsFlyer SDK를 Unity 프로젝트에 적용을 시켜서 연동을 시키려�
 
 먼저 깃허브에서 플러그인을 다운을 받는다.<br><br>
 
-[사진 AppsFlyer1]<br><br>
+<img src="image/AppsFlyer1.PNG" width="100%"><br>
+
 
 사간이 지나서 버전이 업데이트가 되어서 버전이 달라졌을 수도 있지만, 제일 최신 버전을 쓰면된다.<br><br>
 다운을 받고 원하는 유니티 프로젝트에 넣고 임포트를 하면 된다.<br><br>
 
-[사진 AppsFlyer2]<br><br>
-
+<img src="image/AppsFlyer2.PNG" width="100%"><br>
 
 임포트를 했으면 AppsFlyer 폴더가 따로 생겼을 것이다.<br>
 AppsFlyer에 들어간 후에 AppsFlyerObject라는 프리펩을 씬으로 이동시킨다.
 
 
-[사진 AppsFlyer3]<br><br>
+<img src="image/AppsFlyer3.PNG" width="100%"><br>
 
 Dev Key를 입력하는 칸이 있는데 이것은 AppFlyer 사이트에서 가입을 하고 앱을 추가를 한다면
 
-[사진 AppsFlyer3]<br><br>
+<img src="image/AppsFlyer4.PNG" width="100%"><br>
 
 대략적인 순서는 이렇게 될 것이다.<br><br>
 
