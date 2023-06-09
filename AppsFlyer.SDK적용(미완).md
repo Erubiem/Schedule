@@ -58,8 +58,15 @@ Dev Key를 입력하는 칸이 있는데 이것은 AppFlyer 사이트에서 가�
 마지막에 Dev Key를 보여주는 팝업차을 띄울텐데 그걸 복사하고 Dev Key를 입력하는 칸에 붙여놓으면 된다.<br>
 참고로 App ID는 IOS 용이다. Android는 App ID 칸은 아무것도 쓰지말고 빈 칸으로 나두면 된다.<br><br><br>
 
+이렇게 되면 연동이 되었는지 확인을 해야되는데 AppsFlyer 사이트에서 연동이 되었는지 확인할 수 있다.
 
+<img src="image/AppsFlyer5.PNG" width="100%"><br>
 
+연동을 확인할 앱을 정하고 그림에 표시하는 곳으로 가서  
+연동이 확인할 방법을 알 수 있다. <br>
+원하는 방법을 선택하여 사이트에서 원하는 수서대로 진행한다면 수월하다.<br>
+
+[IN-APP-Event Generator](https://evgen.appsflyer.com/)<br><br>
 
 
 
@@ -76,4 +83,4 @@ Dev Key를 입력하는 칸이 있는데 이것은 AppFlyer 사이트에서 가�
 
 [AppsFlyer Guide1](https://support.appsflyer.com/hc/ko/articles/360007314277)<br><br>
 [AppsFlyer Guide2](https://ko.dev.appsflyer.com/hc/docs/install-android-sdk)<br><br>
-[IN-APP-Event Generator](https://evgen.appsflyer.com/)<br><br>
+
