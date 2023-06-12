@@ -183,10 +183,13 @@ GlobalData는 딕셔너리를 통해 저장하는 곳이다.
 
 # 5 구글 클라우드 JSON 세이브로드 (SaveLoad Scene)<br>
 
-이 것은 구글 클라우드와 유니티를 연결시켜서 저장시키는 것이다.
-그러니 먼저 다운로드를 받아야하는 것이 있기도하다.
+이 것은 구글 클라우드와 유니티를 연결시켜서 저장시키는 것이다.<br><br>
+그러니 먼저 다운로드를 받아야하는 것이 있기도 하다.<br>
 
-왜냐면 그렇게 
+먼저 우리가 구글 클라우드를 원활하게 상호작용을 할 수 있도록 하려면 아래의 파일들을 모두 유니티에 집어넣어야<br>
+코드가 작동을 할 수 있다.<br><br>
+
+밑에는 파일들에 대한 설명이다.<br>
 
 System.Threading.Tasks.Extensions는 .NET Framework 및 .NET Core에서 비동기 프로그래밍을 지원하는 기능을 제공하는 어셈블리<br><br>
 System.Runtime.CompilerServices.Unsafe.dll는 Unsafe 클래스와 메모리 조작 기능 제공<br><br>
@@ -201,6 +204,17 @@ Google.Apis.Auth.PlatformServices.dll은 Google API 클라이언트 라이브러
 Google.Apis.Auth.dll은 Google API 클라이언트 라이브러리의 일부로서, Google API와의 인증을 관리하기 위한 기능을 제공합니다. 이 라이브러리는 .NET 환경에서 Google API에 접근하고 사용자 인증 및 권한 부여를 처리하는 데 사용<br><br>
 Google.Api.Gax.Rest.dll은 Google API 클라이언트 라이브러리의 일부로서, Google API와의 RESTful API 통신을 단순화하고 간소화하는 기능을 제공합니다. 이 라이브러리는 .NET 환경에서 Google API에 대한 HTTP 요청을 수행하고 응답을 처리하는 데 사용<br><br>
 Google.Api.Gax.dll은 Google API 클라이언트 라이브러리의 핵심 구성 요소입니다. 이 라이브러리는 Google 클라우드 플랫폼과 상호 작용하기 위한 일반적인 유틸리티와 기능을 제공<br><br>
+
+만약 시간이 지나서 몇 개의 파일이 작동이 안될 수 있는데 <br>
+그럴땐 무엇이 안되는지 보고 알맞는 파일을 업데이트를 하면 된다.<br>
+
+
+
+
+
+
+
+
 
 # 6 오류 정리 <br>
 
