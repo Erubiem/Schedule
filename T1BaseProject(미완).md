@@ -191,19 +191,50 @@ GlobalData는 딕셔너리를 통해 저장하는 곳이다.
 
 밑에는 파일들에 대한 설명이다.<br>
 
-System.Threading.Tasks.Extensions는 .NET Framework 및 .NET Core에서 비동기 프로그래밍을 지원하는 기능을 제공하는 어셈블리<br><br>
-System.Runtime.CompilerServices.Unsafe.dll는 Unsafe 클래스와 메모리 조작 기능 제공<br><br>
-Newtonsoft.Json.dll는 JSON 데이터를 다루기 위한 .NET용 라이브러리인 Newtonsoft.Json의 실행 파일<br><br>
-Microsoft.Extensions.DependencyInjection.Abstractions.dll은 .NET Core 및 .NET Standard 기반의 의존성 주입(Dependency Injection) 패턴을 지원하기 위한 Microsoft 확장 기능 파일<br><br>
-Microsoft.Bcl.AsyncInterfaces.dll은 비동기 프로그래밍을 위한 인터페이스와 유틸리티를 제공하는 Microsoft BCL(기본 클래스 라이브러리)의 일부입니다. 이 어셈블리는 .NET Standard 2.1 이전 버전에서 비동기 작업을 지원<br><br>
-Google.Cloud.Storage.V1.dll은 구글 클라우드 스토리지를 사용하기 위한 Google Cloud Storage 클라이언트 라이브러리입니다. 이 라이브러리는 구글 클라우드 스토리지와 상호 작용하기 위한 기능과 클래스를 제공<br><br>
-Google.Apis.Storage.v1.dll은 Google Cloud Storage API의 .NET 클라이언트 라이브러리입니다. 이 라이브러리는 Google Cloud Storage 서비스와 상호 작용하기 위한 기능과 클래스를 제공<br><br>
-Google.Apis.dll은 Google API 클라이언트 라이브러리의 핵심 어셈블리입니다. 이 라이브러리는 Google 서비스와의 상호 작용을 위한 일반적인 기능과 클래스를 제공<br><br>
-Google.Apis.Core.dll은 Google API 클라이언트 라이브러리의 핵심 기능을 제공하는 어셈블리입니다. 이 라이브러리는 Google API와의 상호 작용에 필요한 핵심 구성 요소와 유틸리티 기능을 제공<br><br>
-Google.Apis.Auth.PlatformServices.dll은 Google API 클라이언트 라이브러리에서 제공되는 플랫폼 서비스에 대한 구현을 포함하는 어셈블리입니다. 이 어셈블리는 .NET 환경에서 Google API와 상호 작용할 때 필요한 플랫폼 종속 기능을 지원<br><br>
-Google.Apis.Auth.dll은 Google API 클라이언트 라이브러리의 일부로서, Google API와의 인증을 관리하기 위한 기능을 제공합니다. 이 라이브러리는 .NET 환경에서 Google API에 접근하고 사용자 인증 및 권한 부여를 처리하는 데 사용<br><br>
-Google.Api.Gax.Rest.dll은 Google API 클라이언트 라이브러리의 일부로서, Google API와의 RESTful API 통신을 단순화하고 간소화하는 기능을 제공합니다. 이 라이브러리는 .NET 환경에서 Google API에 대한 HTTP 요청을 수행하고 응답을 처리하는 데 사용<br><br>
-Google.Api.Gax.dll은 Google API 클라이언트 라이브러리의 핵심 구성 요소입니다. 이 라이브러리는 Google 클라우드 플랫폼과 상호 작용하기 위한 일반적인 유틸리티와 기능을 제공<br><br>
+
+```
+System.Threading.Tasks.Extensions.dll은 .NET Framework 및 
+.NET Core에서 비동기 프로그래밍을 지원하는 기능을 제공하는 어셈블리
+
+System.Runtime.CompilerServices.Unsafe.dll는 Unsafe 클래스와 메모리 조작 기능 제공
+
+Newtonsoft.Json.dll는 JSON 데이터를 다루기 위한 
+.NET용 라이브러리인 Newtonsoft.Json의 실행 파일
+
+Microsoft.Extensions.DependencyInjection.Abstractions.dll은 .NET Core 및 
+.NET Standard 기반의 의존성 주입(Dependency Injection) 패턴을 지원하기 위한 Microsoft 확장 기능 파일
+
+Microsoft.Bcl.AsyncInterfaces.dll은 비동기 프로그래밍을 위한 인터페이스와 유틸리티를 제공하는 
+Microsoft BCL(기본 클래스 라이브러리)의 일부입니다. 이 어셈블리는 .NET Standard 2.1 이전 버전에서 비동기 작업을 지원
+
+Google.Cloud.Storage.V1.dll은 구글 클라우드 스토리지를 사용하기 위한 Google Cloud Storage 
+클라이언트 라이브러리입니다. 이 라이브러리는 구글 클라우드 스토리지와 상호 작용하기 위한 기능과 클래스를 제공
+
+Google.Apis.Storage.v1.dll은 Google Cloud Storage API의 .NET 클라이언트 라이브러리입니다. 
+이 라이브러리는 Google Cloud Storage 서비스와 상호 작용하기 위한 기능과 클래스를 제공
+
+Google.Apis.dll은 Google API 클라이언트 라이브러리의 핵심 어셈블리입니다. 
+이 라이브러리는 Google 서비스와의 상호 작용을 위한 일반적인 기능과 클래스를 제공
+
+Google.Apis.Core.dll은 Google API 클라이언트 라이브러리의 핵심 기능을 제공하는 어셈블리입니다.
+이 라이브러리는 Google API와의 상호 작용에 필요한 핵심 구성 요소와 유틸리티 기능을 제공
+
+Google.Apis.Auth.PlatformServices.dll은 Google API 클라이언트 라이브러리에서 제공되는
+플랫폼 서비스에 대한 구현을 포함하는 어셈블리입니다. 이 어셈블리는 
+.NET 환경에서 Google API와 상호 작용할 때 필요한 플랫폼 종속 기능을 지원
+
+Google.Apis.Auth.dll은 Google API 클라이언트 라이브러리의 일부로서,
+Google API와의 인증을 관리하기 위한 기능을 제공합니다. 이 라이브러리는 .NET 환경에서 
+Google API에 접근하고 사용자 인증 및 권한 부여를 처리하는 데 사용
+
+Google.Api.Gax.Rest.dll은 Google API 클라이언트 라이브러리의 일부로서, 
+Google API와의 RESTful API 통신을 단순화하고 간소화하는 기능을 제공합니다. 
+이 라이브러리는 .NET 환경에서 Google API에 대한 HTTP 요청을 수행하고 응답을 처리하는 데 사용
+
+Google.Api.Gax.dll은 Google API 클라이언트 라이브러리의 핵심 구성 요소입니다. 
+이 라이브러리는 Google 클라우드 플랫폼과 상호 작용하기 위한 일반적인 유틸리티와 기능을 제공
+```
+
 
 만약 시간이 지나서 몇 개의 파일이 작동이 안될 수 있는데 <br>
 그럴땐 무엇이 안되는지 보고 알맞는 파일을 업데이트를 하면 된다.<br>
