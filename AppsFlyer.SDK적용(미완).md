@@ -55,8 +55,33 @@ Dev Key를 입력하는 칸이 있는데 이것은 AppFlyer 사이트에서 가�
 
 대략적인 순서는 이렇게 될 것이다.<br><br>
 
-마지막에 Dev Key를 보여주는 팝업차을 띄울텐데 그걸 복사하고 Dev Key를 입력하는 칸에 붙여놓으면 된다.<br>
+그리곤 Dev Key를 보여주는 팝업차을 띄울텐데 그걸 복사하고 Dev Key를 입력하는 칸에 붙여놓으면 된다.<br>
 참고로 App ID는 IOS 용이다. Android는 App ID 칸은 아무것도 쓰지말고 빈 칸으로 나두면 된다.<br><br><br>
+
+
+또한 AndroidManifest파일에 코드를 추가해야되는데 
+
+
+<img src="image/AppsFlyer8.PNG" width="100%"><br>
+
+위의 사진에 있는 경로를 따라서 AndroidManifest.xml 파일에 들어간다.
+
+
+```c#
+
+<uses-permission android:name="android.permission.INTERNET" />
+<uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+
+```
+
+위에 있는 코드를 추가하면 끝인데,
+만약 API 수준 31(안드로이드 12)을 타겟팅하는 앱은 AndroidManifest.xml에 다음 권한을 추가하여 안드로이드 광고 식별자에 액세스할 수 있어야 하기에 
+```c#
+<uses-permission android:name="com.google.android.gms.permission.AD_ID" />
+```
+
+이렇게 추가를 하면 된다.
 
 이렇게 되면 연동이 되었는지 확인을 해야되는데 AppsFlyer 사이트에서 연동이 되었는지 확인할 수 있다.
 
