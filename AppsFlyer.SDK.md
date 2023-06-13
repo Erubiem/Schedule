@@ -96,7 +96,12 @@ Dev Key를 입력하는 칸이 있는데 이것은 AppFlyer 사이트에서 가�
 
 이제 인 앱 이벤트를 통해 분석을 하기 위해서는 따로 스크립트를 붙여된다.<br>
 
+```C#
+        Dictionary<string, string> eventValues = new Dictionary<string, string>();
+        eventValues.Add("event_name", "login");
+        AppsFlyer.sendEvent("login", eventValues);
 
+```
 <img src="image/AppsFlyer6.PNG" width="100%"><br><br>
 
 먼저 나는 부분을 지나가면 login이라는 이벤트가 발생되어 숫자가 오르게 만들었는데<br>
