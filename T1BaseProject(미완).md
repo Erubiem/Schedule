@@ -240,7 +240,7 @@ Google.Api.Gax.dll은 Google API 클라이언트 라이브러리의 핵심 구�
 만약 시간이 지나서 몇 개의 파일이 작동이 안될 수 있는데 <br>
 그럴땐 무엇이 안되는지 보고 알맞는 파일을 업데이트를 하면 된다.<br>
 
-그리고 Newtonsoft.Json은 유니티에 오류가 나오기 
+그리고 Newtonsoft.Json은 유니티에 오류가 나오기 <br><br><br>
 
 
 
