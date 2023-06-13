@@ -1,4 +1,4 @@
-
+![image](https://github.com/SesisoftTFT/Schedule/assets/124660944/4493b758-76b6-43d4-9bbd-76bfa6a69a8c)
 # AppsFlyer.SDK적용
 
 ---
@@ -60,7 +60,7 @@ Dev Key를 입력하는 칸이 있는데 이것은 AppFlyer 사이트에서 가�
 
 이렇게 되면 연동이 되었는지 확인을 해야되는데 AppsFlyer 사이트에서 연동이 되었는지 확인할 수 있다.
 
-<img src="image/AppsFlyer5.PNG" width="100%"><br>
+<img src="image/AppsFlyer5.PNG" width="100%"><br><br>
 
 연동을 확인할 앱을 정하고 그림에 표시하는 곳으로 가서  
 연동이 확인할 방법을 알 수 있다. <br>
@@ -68,13 +68,28 @@ Dev Key를 입력하는 칸이 있는데 이것은 AppFlyer 사이트에서 가�
 
 
 이제 인 앱 이벤트를 통해 분석을 하기 위해서는 따로 스크립트를 붙여된다.<br>
-하지만 걱정 할 것 없다.<br>
-AppsFlyer에서 따로 인 앱 이벤트 스크립트 제작 사이트를 만들어줬었디 때문이다.<br>
+
+
+<img src="image/AppsFlyer6.PNG" width="100%"><br><br>
+
+먼저 나는 부분을 지나가면 login이라는 이벤트가 발생되어 숫자가 오르게 만들었는데<br>
+만약 연동이 완벽하게 되었다면 2시간이내에 확인할 수 있는데<br>
+
+
+<img src="image/AppsFlyer7.PNG" width="100%"><br><br>
+
+이벤트에 들어가보면 자신이 이벤트를 활성화 시킨 수만큼<br>
+숫자가 올라가있는 것을 발견할 수 있을 것이다.<br>
+
+
+만약 코드를 무엇을 어떻게 짜야하는지 몰라도 걱정할 필요는 없다.
+AppsFlyer에서 따로 인 앱 이벤트 스크립트 제작 사이트를 만들어줬었기 때문이다.<br>
 
 [IN-APP-Event Generator](https://evgen.appsflyer.com/)<br><br>
 
 
-여기에서 원하는 이벤트를 골라서 
+여기에서 원하는 이벤트를 골라서 코드를 그대로 쓰거나 참고를 하면
+좀 더 수월하게 코드를 작성할 수 있다.
 
 
 
@@ -85,8 +100,7 @@ AppsFlyer에서 따로 인 앱 이벤트 스크립트 제작 사이트를 만들
 
 
 
-
-
+---참고자료---
 
 [AppsFlyer Guide1](https://support.appsflyer.com/hc/ko/articles/360007314277)<br><br>
 [AppsFlyer Guide2](https://ko.dev.appsflyer.com/hc/docs/install-android-sdk)<br><br>
