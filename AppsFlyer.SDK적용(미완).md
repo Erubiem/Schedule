@@ -100,7 +100,14 @@ AppsFlyer에서 따로 인 앱 이벤트 스크립트 제작 사이트를 만들
 
 
 
----참고자료---
+---
+<aside>
+
+- 참고자료
+
+</aside>
+
+
 
 [AppsFlyer Guide1](https://support.appsflyer.com/hc/ko/articles/360007314277)<br><br>
 [AppsFlyer Guide2](https://ko.dev.appsflyer.com/hc/docs/install-android-sdk)<br><br>
