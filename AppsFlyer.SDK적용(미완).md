@@ -1,4 +1,4 @@
-![image](https://github.com/SesisoftTFT/Schedule/assets/124660944/4493b758-76b6-43d4-9bbd-76bfa6a69a8c)
+
 # AppsFlyer.SDK적용
 
 ---
