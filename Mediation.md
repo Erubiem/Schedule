@@ -502,7 +502,53 @@ Admob 광고 계정이 정지를 먹을 확률이 농후하기에 테스트 ID�
 ## 3_3_1. 광고 미디에이션 붙이기 및 다른 광고 네트워크 선택하기 <br>
 
 
+Admob에서 광고 네트워크를 연결시켜서 미디에이션 그룹을 만드는 것을 성공했다면
+이제 유니티에 미디에이션을 접목시켜야한다.
+
 [Admob 미디에이션 시작](https://developers.google.com/admob/unity/mediate?hl=ko)<br>
+
+위의 링크에 가이드를 따라한다면 문제 없이 가능겠지만, 
+설명은 계속하도록 하겠다.
+
+모바일 광고 SDK 초기화라는 부분이 있다.
+```C#
+
+using GoogleMobileAds.Api;
+using System.Collections.Generic;
+
+
+public class GoogleMobileAdsDemoScript : MonoBehaviour
+{
+
+
+    public void Start()
+    {
+        // Initialize the Mobile Ads SDK.
+        MobileAds.Initialize((initStatus) =>
+        {
+            Dictionary<string, AdapterStatus> map = initStatus.getAdapterStatusMap();
+            foreach (KeyValuePair<string, AdapterStatus> keyValuePair in map)
+            {
+                string className = keyValuePair.Key;
+                AdapterStatus status = keyValuePair.Value;
+                switch (status.InitializationState)
+                {
+                case AdapterState.NotReady:
+                    // The adapter initialization did not complete.
+                    MonoBehaviour.print("Adapter: " + className + " not ready.");
+                    break;
+                case AdapterState.Ready:
+                    // The adapter was successfully initialized.
+                    MonoBehaviour.print("Adapter: " + className + " is initialized.");
+                    break;
+                }
+            }
+        });
+
+    }
+}
+```
+
 
 
 
