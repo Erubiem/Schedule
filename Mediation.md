@@ -284,9 +284,12 @@
 리워드 광고는 현재 총 27개 많은 광고 소스가 있다.<br>
 입맛에 맞는 소스를 선택하면 되겠다.<br><br>
 
+붙이는 방법은 밑에 링크가 있으니 여기서 자신이 고른 광고 네트워크에 관한 설명이 있으면
+들어가서 살펴보기 바란다.
 
+[Admob 네트워크 선택](https://developers.google.com/admob/unity/choose-networks?hl=ko)<br>
 
-
+ <img src="image/mediationSdk1.PNG" width="60%"><br>
 
 
 ## 3_2. 구글 애드몹 SDK 붙이기<br><br>
@@ -502,15 +505,14 @@ Admob 광고 계정이 정지를 먹을 확률이 농후하기에 테스트 ID�
 ## 3_3_1. 광고 미디에이션 붙이기 및 다른 광고 네트워크 선택하기 <br>
 
 
-Admob에서 광고 네트워크를 연결시켜서 미디에이션 그룹을 만드는 것을 성공했다면
-이제 유니티에 미디에이션을 접목시켜야한다.
+Admob에서 광고 네트워크를 연결시켜서 미디에이션 그룹을 만드는 것을 성공했다면<br>
+이제 유니티에 미디에이션을 접목시켜야한다.<br><br>
 
 [Admob 미디에이션 시작](https://developers.google.com/admob/unity/mediate?hl=ko)<br>
 
-위의 링크에 가이드를 따라한다면 문제 없이 가능겠지만, 
-설명은 계속하도록 하겠다.
+위의 링크에 가이드를 따라보면<br>
 
-모바일 광고 SDK 초기화라는 부분이 있다.
+모바일 광고 SDK 초기화라는 부분이 있다.<br><br>
 ```C#
 
 using GoogleMobileAds.Api;
@@ -549,6 +551,7 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
 }
 ```
 
+위의 코드가 있는 이유는 모든 광고 네트워크가 광고 경쟁에 참여할 수 있도록 하려고 있는 것이다.
 
 
 
@@ -556,9 +559,7 @@ public class GoogleMobileAdsDemoScript : MonoBehaviour
 
 
 
-[Admob 네트워크 선택](https://developers.google.com/admob/unity/choose-networks?hl=ko)<br>
 
- <img src="image/mediationSdk1.PNG" width="60%"><br>
 
 
 
