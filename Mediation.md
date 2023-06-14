@@ -1,4 +1,4 @@
-# 개요 
+![image](https://github.com/SesisoftTFT/Schedule/assets/124660944/d88ed201-5291-4a87-a519-bd9bdc785e5c)![image](https://github.com/SesisoftTFT/Schedule/assets/124660944/160f79b0-b4a7-4c6e-9a5d-4c7640ec41d0)# 개요 
  
  - Unity 프로젝트 안에 구글 애드몹 미디에이션을 붙이기
 
@@ -227,9 +227,204 @@
 여기서 원하는 광고 네트워크를 선택해서 사이트에 있는 설명대로 따라하기 만 한다면,<br>
 광고 네트워크를 붙일 수 있다.<br>
 
+[Admob 보상형 광고붙이기](https://developers.google.com/admob/unity/rewarded-interstitial?hl=ko)<br>
+ 
+ <img src="image/mediationSdk2.PNG" width="60%"><br>
+
+
+광고를 만들 때 광고의 형식을 먼저 정해야 한다.
+현재는 보상형 전면 광고를 대상으로 정하고 진행하지만 다른 광고 형식을 진행하고 싶다면 
+링크로 들어가서 다른 광고 형식을 선택하고 가이드대로 진행하면된다.
+
+
+ <img src="image/mediationSdk3.PNG" width="60%"><br>
+
+
+먼저 광고는 테스트로 진행한다. 왜냐하면 자신이 갖고 있는 광고의 ID를 쓴다면
+Admob 광고 계정이 정지를 먹을 확률이 농후하기에 테스트 ID로 진행하게 된다.
+
+ <img src="image/mediationSdk5.PNG" width="60%"><br>
+
+물론 여기에도 테스트 ID로 진행하면 된다.
+
+보상형 전면 광고 칸에 가게 되면 단계가 있다.
+
+1.보상형 전면 광고 로드
+2.[선택사항] 서버 측 확인 (SSV) 콜백 확인
+3.리워드 콜백으로 보상형 전면 광고 표시
+4.보상형 전면 광고 이벤트 수신
+5.보상형 전면 광고 정리
+6.다음 보상형 전면 광고 미리 로드
+
+이 단계들을 순서대로 진행을 하고 자신의 입맛대로 변화시키면 문제없이 돌아갈 것이다.
+
+```C#
+
+    public void LoadRewardedInterstitialAd()
+    {
+       
+#if UNITY_EDITOR
+        string _adUnitId = "unused";
+#elif UNITY_ANDROID
+        string _adUnitId = "ca-app-pub-3940256099942544/5224354917";
+#elif UNITY_IPHONE
+        string _adUnitId = "ca-app-pub-3940256099942544/1712485313";
+#else
+        string _adUnitId = "unexpected_platform";
+#endif
+        // Initialize the Google Mobile Ads SDK.
+        MobileAds.Initialize((InitializationStatus initStatus) =>
+        {
+            Dictionary<string, AdapterStatus> map = initStatus.getAdapterStatusMap();
+            foreach (KeyValuePair<string, AdapterStatus> keyValuePair in map)
+            {
+                string className = keyValuePair.Key;
+                AdapterStatus status = keyValuePair.Value;
+                switch (status.InitializationState)
+                {
+                    case AdapterState.NotReady:
+                        // The adapter initialization did not complete.
+                        MonoBehaviour.print("Adapter: " + className + " not ready.");
+                        break;
+                    case AdapterState.Ready:
+                        // The adapter was successfully initialized.
+                        MonoBehaviour.print("Adapter: " + className + " is initialized.");
+                        break;
+                }
+            }
+            //LoadRewardedInterstitialAd();
+        });
+        MobileAds.RaiseAdEventsOnUnityMainThread = true;
+        // Clean up the old ad before loading a new one.
+        if (rewardedInterstitialAd != null)
+        {
+            rewardedInterstitialAd.Destroy();
+            rewardedInterstitialAd = null;
+        }
+
+        Debug.Log("Loading the rewarded interstitial ad.");
+
+        // create our request used to load the ad.
+        var adRequest = new AdRequest.Builder().Build();
+
+        // send the request to load the ad.
+        RewardedInterstitialAd.Load(_adUnitId, adRequest, (RewardedInterstitialAd ad, LoadAdError error) =>
+        {
+            // If the operation failed, an error is returned.
+            if (error != null || ad == null)
+            {
+                Debug.LogError("Rewarded interstitial ad failed to load an ad with error : " + error);
+                return;
+            }
+
+            // If the operation completed successfully, no error is returned.
+            Debug.Log("Rewarded interstitial ad loaded with response : " + ad.GetResponseInfo());
+            List<string> deviceIds = new List<string>();
+            deviceIds.Add("2077ef9a63d2b398840261c8221a0c9b");
+
+            // Create and pass the SSV options to the rewarded ad.
+            var options = new ServerSideVerificationOptions
+                                  .Builder()
+                                    
+                                  .SetCustomData("SAMPLE_CUSTOM_DATA_STRING")
+                                  .Build();
+    ad.SetServerSideVerificationOptions(options);
+            rewardedInterstitialAd = ad;
+            RegisterEventHandlers(rewardedInterstitialAd);
+            ShowRewardedInterstitialAd();
+        });
+    }
+    public void ShowRewardedInterstitialAd()
+    {
+        const string rewardMsg =
+            "Rewarded interstitial ad rewarded the user. Type: {0}, amount: {1}.";
+
+        if (rewardedInterstitialAd != null && rewardedInterstitialAd.CanShowAd())
+        {
+            rewardedInterstitialAd.Show((Reward reward) =>
+            {
+                // TODO: Reward the user.
+                Debug.Log("RewardedInterstitial 왔다감");
+                Debug.Log(String.Format(rewardMsg, reward.Type, reward.Amount));
+            });
+        }
+        //rewardedInterstitialAd.Destroy(); // 메서드를 호출하여 메모리 누수 방지
+    }
+    private void RegisterEventHandlers(RewardedInterstitialAd ad)
+    {
+        // Raised when the ad is estimated to have earned money.
+        ad.OnAdPaid += (AdValue adValue) =>
+        {
+            Debug.Log(String.Format("Rewarded interstitial ad paid {0} {1}.",
+                adValue.Value,
+                adValue.CurrencyCode));
+        };
+        // Raised when an impression is recorded for an ad.
+        ad.OnAdImpressionRecorded += () =>
+        {
+            Debug.Log("Rewarded interstitial ad recorded an impression.");
+        };
+        // Raised when a click is recorded for an ad.
+        ad.OnAdClicked += () =>
+        {
+            Debug.Log("Rewarded interstitial ad was clicked.");
+        };
+        // Raised when an ad opened full screen content.
+        ad.OnAdFullScreenContentOpened += () =>
+        {
+            Debug.Log("Rewarded interstitial ad full screen content opened.");
+        };
+        // Raised when the ad closed full screen content.
+        ad.OnAdFullScreenContentClosed += () =>
+        {
+            Debug.Log("Rewarded interstitial ad full screen content closed.");
+        };
+        // Raised when the ad failed to open full screen content.
+        ad.OnAdFullScreenContentFailed += (AdError error) =>
+        {
+            Debug.LogError("Rewarded interstitial ad failed to open full screen content " +
+                           "with error : " + error);
+        };
+    }
+    private void RegisterReloadHandler(RewardedInterstitialAd ad)
+    {
+        // Raised when the ad closed full screen content.
+        ad.OnAdFullScreenContentClosed += () =>
+    {
+            Debug.Log("Rewarded interstitial ad full screen content closed.");
+
+            // Reload the ad so that we can show another as soon as possible.
+            LoadRewardedInterstitialAd();
+        };
+        // Raised when the ad failed to open full screen content.
+        ad.OnAdFullScreenContentFailed += (AdError error) =>
+        {
+            Debug.LogError("Rewarded interstitial ad failed to open full screen content " +
+                           "with error : " + error);
+
+            // Reload the ad so that we can show another as soon as possible.
+            LoadRewardedInterstitialAd();
+        };
+    }
+}
+
+```
+
+이해가 안된다면 위의 코드를 보도록 하자.
+
+
+
+
 [Admob 미디에이션 시작](https://developers.google.com/admob/unity/mediate?hl=ko)<br>
 
+
+
+
 [Admob 네트워크 선택](https://developers.google.com/admob/unity/choose-networks?hl=ko)<br>
+
+ <img src="image/mediationSdk1.PNG" width="60%"><br>
+
+
 
 -----------------------------------------------------------------------------------------------------------------------------------------------------------------
 
