@@ -18,11 +18,11 @@
 </aside>
 
 --- 
-
-
+ <img src="image/GoogleAds.jpg" width="90%"><br><br><br>
 # [구글애즈_캠페인_셋업_매뉴얼](https://github.com/SesisoftTFT/Schedule/blob/main/GoogleAds/%EA%B5%AC%EA%B8%80%EC%95%A0%EC%A6%88%EC%BA%A0%ED%8E%98%EC%9D%B8%EC%85%8B%EC%97%85%20%EB%A7%A4%EB%89%B4%EC%96%BC.pdf)<br>
 
 
+<br><br><br>
 
 # 목차
 
