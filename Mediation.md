@@ -224,7 +224,7 @@
  <img src="image/mediationSdk8.PNG" width="60%"><br>
 
 광고 단위를 만들게 되면 첫 번째는 원하는 광고 형식을 선택할 텐데<br>
-지금은 보상형 전면 광고를 주제로 잡았기에 그것을 선택했고 <br>
+지금은 리워드 광고를 주제로 잡았기에 그것을 선택했고 <br>
 
 
  <img src="image/mediationSdk9.PNG" width="60%"><br><br>
@@ -253,6 +253,9 @@
  <img src="image/mediationSdk12.PNG" width="60%"><br><br>
 
 다음은 마지막으로 미디에이션 설정이다.
+
+사진위에 미디에이션 그룹 만들기를 클릭하고
+광고형식과 플랫폼을 선택한다.
 
 
 
