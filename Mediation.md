@@ -1,4 +1,4 @@
-
+![image](https://github.com/SesisoftTFT/Schedule/assets/124660944/3909bebd-2eeb-4843-9d3e-eaafea4aca7f)
  
  - Unity 프로젝트 안에 구글 애드몹 미디에이션을 붙이기
 
@@ -224,7 +224,7 @@
  <img src="image/mediationSdk8.PNG" width="60%"><br>
 
 광고 단위를 만들게 되면 첫 번째는 원하는 광고 형식을 선택할 텐데<br>
-지금은 리워드 광고를 주제로 잡았기에 그것을 선택했고 <br>
+지금은 보상형 전면 광고를 주제로 잡았기에 그것을 선택했고 <br>
 
 
  <img src="image/mediationSdk9.PNG" width="60%"><br><br>
@@ -256,6 +256,34 @@
 
 사진위에 미디에이션 그룹 만들기를 클릭하고
 광고형식과 플랫폼을 선택한다.
+
+ <img src="image/mediationSdk13.PNG" width="60%"><br><br>
+
+그리고 광고추가를 누르게 된다면 아까 우리가 만들었던 광고 단위가 있을 텐데 그것을 선택하면 된다.
+
+ <img src="image/mediationSdk14.PNG" width="60%"><br><br>
+
+그렇게 광고 단위를 추가를 하고 이제는 광고 소스를 추가해야하는데 <br>
+현재 보상형 전면 광고는 광고 소스가 별로 없을 수 있다.<br><br>
+
+ <img src="image/mediationSdk15_1.PNG" width="60%"><br><br>
+
+위의 사진이 보상형 광고 소스는 하나밖에 없기 때문에 <br>
+그것을 연결해주면 되겠다.<br><br>
+물론 연결하기위해선 그쪽 사이트를 가입하고 해야하기 때문에 <br>
+거기서 하라는대로만 하면 연결시킬 수 있다.<br>
+
+
+
+
+
+ <img src="image/mediationSdk15_2.PNG" width="60%"><br><br>
+
+여담으로 보상형 전면 광고는 하나밖에 없지만  <br>
+리워드 광고는 현재 총 27개 많은 광고 소스가 있다.<br>
+입맛에 맞는 소스를 선택하면 되겠다.<br><br>
+
+
 
 
 
