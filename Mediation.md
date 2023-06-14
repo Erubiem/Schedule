@@ -1,4 +1,4 @@
-![image](https://github.com/SesisoftTFT/Schedule/assets/124660944/3909bebd-2eeb-4843-9d3e-eaafea4aca7f)
+
  
  - Unity 프로젝트 안에 구글 애드몹 미디에이션을 붙이기
 
