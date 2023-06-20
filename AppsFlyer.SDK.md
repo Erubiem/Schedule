@@ -37,7 +37,7 @@ AppsFlyer SDK를 Unity 프로젝트에 적용을 시켜서 연동을 시키려�
 
 <img src="image/AppsFlyer1.PNG" width="100%"><br><br>
 
-[AppsFlyer 유니티 플러그인](https://github.com/googlesamples/unity-jar-resolver)<br><br><br>
+[AppsFlyer 유니티 플러그인](https://github.com/AppsFlyerSDK/appsflyer-unity-plugin)<br><br><br>
 
 
 시간이 지나서 버전이 업데이트가 되어서 버전이 달라졌을 수도 있지만, 제일 최신 버전을 쓰면된다.<br><br>
